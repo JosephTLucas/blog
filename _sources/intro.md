@@ -1,6 +1,6 @@
 # Blog
 
-The ramblings of a madman. Documenting and sharing bits of knowledge accrued through my wanderings.
+Documenting and sharing bits of knowledge accumulated through my wanderings.
 
 ## About Me
 
