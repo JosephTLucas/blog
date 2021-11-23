@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STUMPY Tutorial &#8212; Blog</title>
+    <title>&lt;no title&gt; &#8212; Blog</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Matplotblog" href="matplotblog.html" />
-    <link rel="prev" title="Interview with Xinof" href="interview_with_xinof.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="mod26.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -101,14 +100,14 @@
   External Writing
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="interview_with_xinof.html">
    Interview with Xinof
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="stumpy_tutorial.html">
    STUMPY Tutorial
   </a>
  </li>
@@ -187,9 +186,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/content/stumpy_tutorial.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/content/the_numbers.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -207,7 +206,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/JosephTLucas/blog/issues/new?title=Issue%20on%20page%20%2Fcontent/stumpy_tutorial.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/JosephTLucas/blog/issues/new?title=Issue%20on%20page%20%2Fcontent/the_numbers.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -223,11 +222,36 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/JosephTLucas/blog/master?urlpath=tree/docs/content/the_numbers.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -236,10 +260,58 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="stumpy-tutorial">
-<h1>STUMPY Tutorial<a class="headerlink" href="#stumpy-tutorial" title="Permalink to this headline">¶</a></h1>
-<p>I created a contribution guide for one of my favorite open source libraries: STUMPY, a TDAmeritrade Open Source project for time series analysis. We wanted to lower the barrier for new contributors from Hacktoberfest.</p>
-<p><a class="reference external" href="https://stumpy.readthedocs.io/en/latest/Contribute.html">https://stumpy.readthedocs.io/en/latest/Contribute.html</a></p>
+  <p><a class="reference external" href="https://play.picoctf.org/practice/challenge/68?category=2&amp;page=1">https://play.picoctf.org/practice/challenge/68?category=2&amp;page=1</a></p>
+<p><img alt="numbers" src="../_images/the_numbers.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">string</span> <span class="kn">import</span> <span class="n">ascii_lowercase</span> <span class="k">as</span> <span class="n">alphabet</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mi">16</span><span class="p">,</span>
+    <span class="mi">9</span><span class="p">,</span>
+    <span class="mi">3</span><span class="p">,</span>
+    <span class="mi">15</span><span class="p">,</span>
+    <span class="mi">3</span><span class="p">,</span>
+    <span class="mi">20</span><span class="p">,</span>
+    <span class="mi">6</span><span class="p">,</span>
+    <span class="s2">&quot;{&quot;</span><span class="p">,</span>
+    <span class="mi">20</span><span class="p">,</span>
+    <span class="mi">8</span><span class="p">,</span>
+    <span class="mi">5</span><span class="p">,</span>
+    <span class="mi">14</span><span class="p">,</span>
+    <span class="mi">21</span><span class="p">,</span>
+    <span class="mi">13</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">,</span>
+    <span class="mi">5</span><span class="p">,</span>
+    <span class="mi">18</span><span class="p">,</span>
+    <span class="mi">19</span><span class="p">,</span>
+    <span class="mi">13</span><span class="p">,</span>
+    <span class="mi">1</span><span class="p">,</span>
+    <span class="mi">19</span><span class="p">,</span>
+    <span class="mi">15</span><span class="p">,</span>
+    <span class="mi">14</span><span class="p">,</span>
+    <span class="s2">&quot;}&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">alphabet</span><span class="p">[</span><span class="n">number</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">int</span> <span class="k">else</span> <span class="n">number</span> <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;picoctf{thenumbersmason}&#39;
+</pre></div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -267,19 +339,12 @@
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="interview_with_xinof.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="mod26.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Interview with Xinof</p>
+            <p class="prev-next-title">&lt;no title&gt;</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="matplotblog.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Matplotblog</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
         
