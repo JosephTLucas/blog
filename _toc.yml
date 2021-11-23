@@ -13,3 +13,7 @@ parts:
     chapters:
     - file: content/labeling
     - file: content/sklearn_sprint
+  - caption: Cryptography / Cryptanalysis
+    - file: content/cryptanalysis
+    - file: content/mod26
+    - file: content/the_numbers
