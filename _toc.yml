@@ -1,0 +1,14 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: External Writing
+    chapters:
+    - file: content/interview_with_xinof
+    - file: content/stumpy_tutorial
+  - caption: Data Science
+    chapters:
+    - file: content/labeling
+    - file: content/sklearn_sprint
