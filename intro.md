@@ -6,5 +6,5 @@ Documenting and sharing bits of knowledge accumulated through my wanderings.
 
 - West Point Math
 - Georgia Tech OMSCS
-- Froemr US Army Cyber
+- Former US Army Cyber
 - Currently AWS
