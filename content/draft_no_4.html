@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Labeling Tip &#8212; Blog</title>
+    <title>Draft No. 4 – John McPhee &#8212; Blog</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Scikit-Learn Sprint" href="sklearn_sprint.html" />
-    <link rel="prev" title="Matplotblog" href="matplotblog.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -123,9 +121,9 @@
   Data Science
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="labeling.html">
    Data Labeling Tip
   </a>
  </li>
@@ -202,7 +200,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/content/labeling.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/content/draft_no_4.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -222,7 +220,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/JosephTLucas/blog/issues/new?title=Issue%20on%20page%20%2Fcontent/labeling.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/JosephTLucas/blog/issues/new?title=Issue%20on%20page%20%2Fcontent/draft_no_4.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -251,38 +249,12 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="data-labeling-tip">
-<h1>Data Labeling Tip<a class="headerlink" href="#data-labeling-tip" title="Permalink to this headline">¶</a></h1>
-<p>I have spent a lot of time labeling lately, and I have two guiding principles:</p>
-<ol class="simple">
-<li><p>Where you can, automatically label.</p></li>
-<li><p>Make it easy to correct automatic labels.</p></li>
-</ol>
-<p><em>Automatically Label</em></p>
-<p>If you had a perfect labeling oracle, you probably would not need to be training a supervised classification model; you would already have an unsupervised model. But you may have a strongly correlated feature or other algorithm that can label your data with some degree of uncertainty. Take this win when you can. Use some substandard method to generate the majority of the labels for you, then spend your work-hours cleaning them up (instead of generating them from scratch). For my main use case, <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.find_peaks.html">peak detection</a> labeled about 70% accurately. This isn’t an acceptable accuracy for production, but it is good enough to save me some time.</p>
-<p><em>Correct Labels</em></p>
-<p>Next, I recommend <a class="reference external" href="https://github.com/matplotlib/ipympl">matplotlib’s jupyter extension</a> and <a class="reference external" href="https://matplotlib.org/3.3.1/users/event_handling.html">event handling</a> to do your label correction.</p>
-<ol class="simple">
-<li><p>Use your labeling oracle to generate a list of labels and their location. For a binary classification task on time series data, I just used the index of each positive class prediction.</p></li>
-<li><p>Plot these label predictions over your data stream.</p></li>
-<li><p>Use the interactive plot to scroll and zoom through your data.</p></li>
-<li><p>Assign matplotlib events to add or remove labels from your label list. In this example, we use the <code class="docutils literal notranslate"><span class="pre">z</span></code> key to add labels and the <code class="docutils literal notranslate"><span class="pre">x</span></code> key to remove labels (at the mouseover location).</p></li>
-</ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">add_list</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">remove_list</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">def</span> <span class="nf">onkey</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
-	<span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;z&#39;</span><span class="p">:</span>
-		<span class="n">add_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">xdata</span><span class="p">))</span>
-	<span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;x&#39;</span><span class="p">:</span>
-		<span class="n">remove_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">xdata</span><span class="p">))</span>
-
-<span class="n">f</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_connect</span><span class="p">(</span><span class="s1">&#39;key_press_event&#39;</span><span class="p">,</span> <span class="n">onkey</span><span class="p">)</span>
-</pre></div>
-</div>
-<ol class="simple">
-<li><p>Afterwards, some list operations allow you to add and remove the necessary labels.</p></li>
-</ol>
-<p>You can see how defining other events would enable you to extend this example to a multiclass problem. Likewise, further defining the coordinate system would enable you to extend this to labeling two-dimensional clusters.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="draft-no-4-john-mcphee">
+<h1>Draft No. 4 – John McPhee<a class="headerlink" href="#draft-no-4-john-mcphee" title="Permalink to this headline">¶</a></h1>
+<p><em>The only thing I’ve read that prompted me to pay for a subscription.</em></p>
+<p><a class="reference external" href="https://www.amazon.com/Draft-No-4-Writing-Process/dp/0374142742">Draft No. 4</a> was a departure from my normal fiction diet. I picked it up <a class="reference external" href="https://www.tatteredcover.com/">The Tattered Cover</a> in Denver along with Stephen King’s <a class="reference external" href="https://www.amazon.com/Writing-10th-Anniversary-Memoir-Craft/dp/1439156816">On Writing</a>. I chewed through No. 4 in as many days and immediately subscribed to the New Yorker. I’ve since enjoyed several pieces of narrative non-fiction that I would have missed: “What it’s Like to Fight a Megafire,” “The Migrant Workers Who Follow Climate Disasters,” “When a Witness Recants,” and “Can Russia’s Press Ever Be Free?”.</p>
+<p>New Yorker plug aside, No. 4 was engaging for both its insight into the world of professional writing (“Green 15”) and exposure to John’s adventures. He takes you from idea, to draft, to revision, to publishing. It’s a suprisingly wild ride. He focuses on the humanity of the participants, but also manages to share tactical writing advice (how should you structure the story?). He doesn’t spout rules in the abstract. He takes you along for the journalism and invites you to review the structure of the resulting narrative together.</p>
+<p>There’s even a fairly entertaining and lengthy anecode about John’s favorite text editor, <a class="reference external" href="https://www.kedit.com/">KEDIT</a>. It doesn’t get much more tactical than that. Even for those not consciously working on their writing, highly recommend.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -309,21 +281,7 @@
               
         
             <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="matplotblog.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Matplotblog</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="sklearn_sprint.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Scikit-Learn Sprint</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
         
         </div>
