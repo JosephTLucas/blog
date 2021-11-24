@@ -21,4 +21,4 @@ parts:
     - file: content/the_numbers
   - caption: Recommended Reading
     chapters:
-    - file: draft_no_4
+    - file: content/draft_no_4
