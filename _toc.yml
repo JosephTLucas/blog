@@ -16,5 +16,9 @@ parts:
   - caption: Cryptography / Cryptanalysis
     chapters:
     - file: content/cryptanalysis
+    - file: content/crypto_tools
     - file: content/mod26
     - file: content/the_numbers
+  - caption: Recommended Reading
+    chapters:
+    - file: draft_no_4
