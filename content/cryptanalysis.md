@@ -1,7 +1,5 @@
 # Cryptanalysis Curriculum
 
-To improve with my cryptography and cryptanalysis skills, I have used the following resources:
-
 ## Completed
 
 - [Understanding Cryptography: A Textbook for Students and Practitioners](https://www.amazon.com/dp/3642446493): Really great resource for understanding the math and logic involved in modern crypto. I read through and took notes, but need to go back and do many of the exercises. It professes to not be a cryptanalysis book, but does a good job of covering the weaknesses and common attacks for many schemes.
@@ -17,3 +15,11 @@ To improve with my cryptography and cryptanalysis skills, I have used the follow
 - [The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet](https://www.amazon.com/dp/0684831309)
 
 - [picoCTF Crypto Challenges](https://play.picoctf.org/practice?category=2&page=1): These seem mainly focused on either old attacks (frequency analysis, known plaintext, etc) or implementation mistakes (OTP reuse), but still fun.
+
+## Found, but still need to review
+
+- [An Intensive Introduction to Cryptography](https://intensecrypto.org/public/)
+
+- [Stanford: Applied Cryptography Group](https://crypto.stanford.edu)
+
+- [The Joy of Cryptography](https://joyofcryptography.com)
