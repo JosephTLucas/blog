@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Labeling Tip &#8212; Blog</title>
+    <title>No Padding, No Problem &#8212; Blog</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Scikit-Learn Sprint" href="sklearn_sprint.html" />
-    <link rel="prev" title="Matplotblog" href="matplotblog.html" />
+    <link rel="next" title="Draft No. 4 – John McPhee" href="draft_no_4.html" />
+    <link rel="prev" title="PicoCTF Challenge: The Numbers" href="the_numbers.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -123,9 +123,9 @@
   Data Science
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="labeling.html">
    Data Labeling Tip
   </a>
  </li>
@@ -140,7 +140,7 @@
   Cryptography / Cryptanalysis
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="cryptanalysis.html">
    Cryptanalysis Curriculum
@@ -161,8 +161,8 @@
    PicoCTF Challenge: The Numbers
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="no_padding_no_problem.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    No Padding, No Problem
   </a>
  </li>
@@ -219,9 +219,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/content/labeling.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/content/no_padding_no_problem.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -239,7 +239,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/JosephTLucas/blog/issues/new?title=Issue%20on%20page%20%2Fcontent/labeling.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/JosephTLucas/blog/issues/new?title=Issue%20on%20page%20%2Fcontent/no_padding_no_problem.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -255,6 +255,23 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/JosephTLucas/blog/master?urlpath=tree/docs/content/no_padding_no_problem.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -268,38 +285,72 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="data-labeling-tip">
-<h1>Data Labeling Tip<a class="headerlink" href="#data-labeling-tip" title="Permalink to this headline">¶</a></h1>
-<p>I have spent a lot of time labeling lately, and I have two guiding principles:</p>
-<ol class="simple">
-<li><p>Where you can, automatically label.</p></li>
-<li><p>Make it easy to correct automatic labels.</p></li>
-</ol>
-<p><em>Automatically Label</em></p>
-<p>If you had a perfect labeling oracle, you probably would not need to be training a supervised classification model; you would already have an unsupervised model. But you may have a strongly correlated feature or other algorithm that can label your data with some degree of uncertainty. Take this win when you can. Use some substandard method to generate the majority of the labels for you, then spend your work-hours cleaning them up (instead of generating them from scratch). For my main use case, <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.find_peaks.html">peak detection</a> labeled about 70% accurately. This isn’t an acceptable accuracy for production, but it is good enough to save me some time.</p>
-<p><em>Correct Labels</em></p>
-<p>Next, I recommend <a class="reference external" href="https://github.com/matplotlib/ipympl">matplotlib’s jupyter extension</a> and <a class="reference external" href="https://matplotlib.org/3.3.1/users/event_handling.html">event handling</a> to do your label correction.</p>
-<ol class="simple">
-<li><p>Use your labeling oracle to generate a list of labels and their location. For a binary classification task on time series data, I just used the index of each positive class prediction.</p></li>
-<li><p>Plot these label predictions over your data stream.</p></li>
-<li><p>Use the interactive plot to scroll and zoom through your data.</p></li>
-<li><p>Assign matplotlib events to add or remove labels from your label list. In this example, we use the <code class="docutils literal notranslate"><span class="pre">z</span></code> key to add labels and the <code class="docutils literal notranslate"><span class="pre">x</span></code> key to remove labels (at the mouseover location).</p></li>
-</ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">add_list</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">remove_list</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">def</span> <span class="nf">onkey</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
-	<span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;z&#39;</span><span class="p">:</span>
-		<span class="n">add_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">xdata</span><span class="p">))</span>
-	<span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;x&#39;</span><span class="p">:</span>
-		<span class="n">remove_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">xdata</span><span class="p">))</span>
-
-<span class="n">f</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_connect</span><span class="p">(</span><span class="s1">&#39;key_press_event&#39;</span><span class="p">,</span> <span class="n">onkey</span><span class="p">)</span>
+  <div class="tex2jax_ignore mathjax_ignore section" id="no-padding-no-problem">
+<h1>No Padding, No Problem<a class="headerlink" href="#no-padding-no-problem" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to the Padding Oracle Challenge
+This oracle will take anything you give it and decrypt using RSA. It will not accept the ciphertext with the secret message… Good Luck!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">120199559973193838354549892082142658207097650252359537516083460817553570005386613360986166000912493892791691164047531246715465233526804393369018699102692997585282405404929642411769685589191403004314951464004606040856090582644697868607882790061040095046085624676496925724241831512872034324551286084224297842637</span>
 </pre></div>
 </div>
-<ol class="simple">
-<li><p>Afterwards, some list operations allow you to add and remove the necessary labels.</p></li>
-</ol>
-<p>You can see how defining other events would enable you to extend this example to a multiclass problem. Likewise, further defining the coordinate system would enable you to extend this to labeling two-dimensional clusters.</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="mi">65537</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="mi">7663878604603605176178448503196010884137598661534924550657029084967288918950468353300685296575323894095255258617919415054374805989359325652736220230210866108008415526260085801082953500312514266232101295493572110042773495662486665996281526563951110999276024750039987398638060394996693137783011654264697917058</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>RSA is malleable (Paar 192). We can transform the ciphertext into another ciphertext which is a known transformation of the plaintext… This can be achieved in RSA if the attacker replaces the ciphertext <code class="docutils literal notranslate"><span class="pre">y</span></code> with <code class="docutils literal notranslate"><span class="pre">(s**e)*y</span></code> with an integer <code class="docutils literal notranslate"><span class="pre">s</span></code>. For this example, we’ll double the cipher text (and know that we have to half the result returned from the oracle.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">c</span> <span class="o">*</span> <span class="p">(</span><span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Give <code class="docutils literal notranslate"><span class="pre">x</span></code> to Oracle and receive <code class="docutils literal notranslate"><span class="pre">doubled</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doubled</span> <span class="o">=</span> <span class="mi">580550060391700078946913236734911770139931497702556153513487440893406629034802718534645538074938502890768853279675297196794</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">doubled</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>290275030195850039473456618367455885069965748851278076756743720446703314517401359267322769037469251445384426639837648598397
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bytearray</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="nb">format</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;picoCTF{m4yb3_Th0se_m3s54g3s_4r3_difurrent_1772735}&#39;
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -327,17 +378,17 @@
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="matplotblog.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="the_numbers.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Matplotblog</p>
+            <p class="prev-next-title">PicoCTF Challenge: The Numbers</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="sklearn_sprint.html" title="next page">
+    <a class='right-next' id="next-link" href="draft_no_4.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Scikit-Learn Sprint</p>
+        <p class="prev-next-title">Draft No. 4 – John McPhee</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
