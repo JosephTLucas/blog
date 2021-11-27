@@ -1,6 +1,6 @@
 # Blog
 
-Documenting and sharing bits of knowledge accumulated through my wanderings.
+Documenting bits of knowledge accumulated through my intellectual wanderings.
 
 ## About Me
 
