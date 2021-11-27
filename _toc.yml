@@ -19,6 +19,7 @@ parts:
     - file: content/crypto_tools
     - file: content/mod26
     - file: content/the_numbers
+    - file: content/no_padding_no_problem
   - caption: Recommended Reading
     chapters:
     - file: content/draft_no_4
