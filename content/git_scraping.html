@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Matplotblog &#8212; Blog</title>
+    <title>Git Scraping &#8212; Blog</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Data Labeling Tip" href="labeling.html" />
-    <link rel="prev" title="STUMPY Tutorial" href="stumpy_tutorial.html" />
+    <link rel="next" title="Cryptanalysis Curriculum" href="cryptanalysis.html" />
+    <link rel="prev" title="Scikit-Learn Sprint" href="sklearn_sprint.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -101,7 +101,7 @@
   External Writing
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="interview_with_xinof.html">
    Interview with Xinof
@@ -112,8 +112,8 @@
    STUMPY Tutorial
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="matplotblog.html">
    Matplotblog
   </a>
  </li>
@@ -123,7 +123,7 @@
   Data Science
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="labeling.html">
    Data Labeling Tip
@@ -134,8 +134,8 @@
    Scikit-Learn Sprint
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="git_scraping.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Git Scraping
   </a>
  </li>
@@ -229,7 +229,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/content/matplotblog.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/content/git_scraping.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -249,7 +249,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/JosephTLucas/blog/issues/new?title=Issue%20on%20page%20%2Fcontent/matplotblog.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/JosephTLucas/blog/issues/new?title=Issue%20on%20page%20%2Fcontent/git_scraping.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -278,10 +278,14 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="matplotblog">
-<h1>Matplotblog<a class="headerlink" href="#matplotblog" title="Permalink to this headline">¶</a></h1>
-<p>As part of the Matplotlib Community Team, I published a blog on a University of North Carolina class’s use of <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> to create art.</p>
-<p><a class="reference external" href="https://matplotlib.org/matplotblog/posts/unc-biol222/">https://matplotlib.org/matplotblog/posts/unc-biol222/</a></p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="git-scraping">
+<h1>Git Scraping<a class="headerlink" href="#git-scraping" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://simonwillison.net/2020/Oct/9/git-scraping/">Simon Willison pioneered a technique that he calls <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">scraping</span></code></a>. The idea is to use GitHub actions and the <code class="docutils literal notranslate"><span class="pre">git</span></code> commit structure to build time series datasets.</p>
+<p>I’m currently building two datasets:</p>
+<ol class="simple">
+<li><p>In November 2021, CISA announced a <a class="reference external" href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">Known Exploited Vulnerabilities Catalog</a>. Binding Operational Directive 22-01 uses this as a foundation for requiring federal agencies to patch their systems. Git scraping will enable a couple pieces of analysis: how long does CISA give federal agencies to patch once they know the vulnerability is being exploited? how are these vulnerabilities distributed between different vendors? is there a pattern to how regularly CISA updates the list or requires patching? <a class="reference external" href="https://github.com/JosephTLucas/CISA_KNOWN_EXPLOITED_VULNERABILITIES_CATALOG">Data available here</a>.</p></li>
+<li><p>The <a class="reference external" href="https://status.aws.amazon.com">AWS Status Dashboard</a>. I’m interested in not only the general distribution of outages, but also recovery times and any pattern in cascading failures. <a class="reference external" href="https://github.com/JosephTLucas/aws_status">Data available here</a>.</p></li>
+</ol>
 </div>
 
     <script type="text/x-thebe-config">
@@ -309,17 +313,17 @@
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="stumpy_tutorial.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="sklearn_sprint.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">STUMPY Tutorial</p>
+            <p class="prev-next-title">Scikit-Learn Sprint</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="labeling.html" title="next page">
+    <a class='right-next' id="next-link" href="cryptanalysis.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Data Labeling Tip</p>
+        <p class="prev-next-title">Cryptanalysis Curriculum</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
