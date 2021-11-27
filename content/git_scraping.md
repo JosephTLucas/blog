@@ -1,4 +1,4 @@
-# Data Scraping
+# Git Scraping
 
 [Simon Willison pioneered a technique that he calls `git scraping`](https://simonwillison.net/2020/Oct/9/git-scraping/). The idea is to use GitHub actions and the `git` commit structure to build time series datasets.
 
