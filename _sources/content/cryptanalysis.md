@@ -23,3 +23,5 @@
 - [Stanford: Applied Cryptography Group](https://crypto.stanford.edu)
 
 - [The Joy of Cryptography](https://joyofcryptography.com)
+
+- [Twenty Years of Attacks on the RSA Cryptosystem](https://www.ams.org/notices/199902/boneh.pdf)
