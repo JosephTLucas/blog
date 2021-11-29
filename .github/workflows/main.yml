@@ -31,6 +31,8 @@ jobs:
 
     # Build the book
     - name: Build the book
+      env: 
+        EBIRD_API: '${{ secrets.EBIRD_API }}'
       run: |
         jupyter-book build .
 
