@@ -14,6 +14,7 @@ parts:
     - file: content/labeling
     - file: content/sklearn_sprint
     - file: content/git_scraping
+    - file: content/bird
   - caption: Cryptography / Cryptanalysis
     chapters:
     - file: content/cryptanalysis
