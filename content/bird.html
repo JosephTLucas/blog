@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Observations in US (past 7 days) &#8212; Blog</title>
+    <title>Cornell eBird &#8212; Blog</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -141,7 +141,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Observations in US (past 7 days)
+   Cornell eBird
   </a>
  </li>
 </ul>
@@ -297,12 +297,12 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#observations-in-us-past-7-days">
    Observations in US (past 7 days)
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-exploration">
    Data Exploration
   </a>
@@ -318,7 +318,10 @@
         
               <div>
                 
-  <div class="cell docutils container">
+  <div class="tex2jax_ignore mathjax_ignore section" id="cornell-ebird">
+<h1>Cornell eBird<a class="headerlink" href="#cornell-ebird" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://ebird.org/home">https://ebird.org/home</a></p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -336,8 +339,8 @@
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="observations-in-us-past-7-days">
-<h1>Observations in US (past 7 days)<a class="headerlink" href="#observations-in-us-past-7-days" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="observations-in-us-past-7-days">
+<h2>Observations in US (past 7 days)<a class="headerlink" href="#observations-in-us-past-7-days" title="Permalink to this headline">¶</a></h2>
 <p>API <a class="reference external" href="https://documenter.getpostman.com/view/664302/S1ENwy59#intro">documented here</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -362,7 +365,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">JSONDecodeError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1608</span><span class="o">/</span><span class="mf">1541602587.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1594</span><span class="o">/</span><span class="mf">1541602587.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 <span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/requests/models.py</span> in <span class="ni">json</span><span class="nt">(self, **kwargs)</span>
@@ -403,15 +406,10 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>There were 752 observations reported in the last 7 days.
-</pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="data-exploration">
-<h1>Data Exploration<a class="headerlink" href="#data-exploration" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="data-exploration">
+<h2>Data Exploration<a class="headerlink" href="#data-exploration" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_records</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -419,124 +417,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>speciesCode</th>
-      <th>comName</th>
-      <th>sciName</th>
-      <th>locId</th>
-      <th>locName</th>
-      <th>obsDt</th>
-      <th>howMany</th>
-      <th>lat</th>
-      <th>lng</th>
-      <th>obsValid</th>
-      <th>obsReviewed</th>
-      <th>locationPrivate</th>
-      <th>subId</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>amekes</td>
-      <td>American Kestrel</td>
-      <td>Falco sparverius</td>
-      <td>L16993375</td>
-      <td>2521 East Shawnee Road, Berrien Springs, Michi...</td>
-      <td>2021-11-28 23:33</td>
-      <td>1.0</td>
-      <td>41.943064</td>
-      <td>-86.397264</td>
-      <td>True</td>
-      <td>False</td>
-      <td>True</td>
-      <td>S98191822</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>rethaw</td>
-      <td>Red-tailed Hawk</td>
-      <td>Buteo jamaicensis</td>
-      <td>L16993375</td>
-      <td>2521 East Shawnee Road, Berrien Springs, Michi...</td>
-      <td>2021-11-28 23:33</td>
-      <td>1.0</td>
-      <td>41.943064</td>
-      <td>-86.397264</td>
-      <td>True</td>
-      <td>False</td>
-      <td>True</td>
-      <td>S98191822</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>sancra</td>
-      <td>Sandhill Crane</td>
-      <td>Antigone canadensis</td>
-      <td>L1048333</td>
-      <td>Rod's Yard</td>
-      <td>2021-11-28 17:53</td>
-      <td>80.0</td>
-      <td>38.382911</td>
-      <td>-85.962181</td>
-      <td>True</td>
-      <td>False</td>
-      <td>True</td>
-      <td>S98216447</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>libher</td>
-      <td>Little Blue Heron</td>
-      <td>Egretta caerulea</td>
-      <td>L1023416</td>
-      <td>Palm Coast Linear Park--St. Joe Walkway</td>
-      <td>2021-11-28 17:50</td>
-      <td>1.0</td>
-      <td>29.559791</td>
-      <td>-81.194658</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>S98216451</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>brnpel</td>
-      <td>Brown Pelican</td>
-      <td>Pelecanus occidentalis</td>
-      <td>L1023416</td>
-      <td>Palm Coast Linear Park--St. Joe Walkway</td>
-      <td>2021-11-28 17:50</td>
-      <td>1.0</td>
-      <td>29.559791</td>
-      <td>-81.194658</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>S98216451</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <p>There are always privacy considerations when using geographical data. Here, we not only have latitudes and longitudes, but also users’ nicknames for those locations. In some cases, those are full addresses. In others, they may leak some personal information (see: <code class="docutils literal notranslate"><span class="pre">Ron's</span> <span class="pre">yard</span></code>).</p>
 <p>We see this addressed in <a class="reference external" href="https://support.ebird.org/en/support/solutions/articles/48000948757-ebird-faqs#anchorhidehome">their documentation</a>. However, I’d consider the default insecure: “you can rename the location so your address is not visible. You can also place or move the location pin to somewhere close by along your street”. It’s a hard problem for a scientific project relying on the accuracy of geolocation data, however. Another solution may be to truncate the accuracy of the the coordinates for public API users.</p>
@@ -544,11 +424,6 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;comName&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>
@@ -560,60 +435,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>speciesCode</th>
-      <th>comName</th>
-      <th>sciName</th>
-      <th>locId</th>
-      <th>locName</th>
-      <th>obsDt</th>
-      <th>howMany</th>
-      <th>lat</th>
-      <th>lng</th>
-      <th>obsValid</th>
-      <th>obsReviewed</th>
-      <th>locationPrivate</th>
-      <th>subId</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>rethaw</td>
-      <td>Red-tailed Hawk</td>
-      <td>Buteo jamaicensis</td>
-      <td>L16993375</td>
-      <td>2521 East Shawnee Road, Berrien Springs, Michi...</td>
-      <td>2021-11-28 23:33</td>
-      <td>1.0</td>
-      <td>41.943064</td>
-      <td>-86.397264</td>
-      <td>True</td>
-      <td>False</td>
-      <td>True</td>
-      <td>S98191822</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -629,8 +450,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/bird_15_0.png" src="../_images/bird_15_0.png" />
 </div>
 </div>
 </div>
