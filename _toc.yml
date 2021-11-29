@@ -26,3 +26,6 @@ parts:
     chapters:
     - file: content/nonfiction
     - file: content/fiction
+  - caption: Hobbies
+    chapters:
+    - file: content/photos.md
