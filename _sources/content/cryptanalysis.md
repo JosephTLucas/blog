@@ -25,3 +25,5 @@
 - [The Joy of Cryptography](https://joyofcryptography.com)
 
 - [Twenty Years of Attacks on the RSA Cryptosystem](https://www.ams.org/notices/199902/boneh.pdf)
+
+- [An Illustrated Guide to Elliptic Curve Cryptography Validation](https://research.nccgroup.com/2021/11/18/an-illustrated-guide-to-elliptic-curve-cryptography-validation/)
