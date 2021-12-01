@@ -2,6 +2,8 @@
 
 Documenting bits of knowledge accumulated through my intellectual wanderings.
 
+Interested in the intersection of information security and data science.
+
 ## About Me
 
 [Twitter](https://twitter.com/josephtlucas)
