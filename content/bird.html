@@ -374,47 +374,15 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">JSONDecodeError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1592</span><span class="o">/</span><span class="mf">1541602587.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/requests/models.py</span> in <span class="ni">json</span><span class="nt">(self, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">908</span>                     <span class="c1"># used.</span>
-<span class="g g-Whitespace">    </span><span class="mi">909</span>                     <span class="k">pass</span>
-<span class="ne">--&gt; </span><span class="mi">910</span>         <span class="k">return</span> <span class="n">complexjson</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">911</span> 
-<span class="g g-Whitespace">    </span><span class="mi">912</span>     <span class="nd">@property</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/json/__init__.py</span> in <span class="ni">loads</span><span class="nt">(s, encoding, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">346</span>             <span class="n">parse_int</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">parse_float</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span>
-<span class="g g-Whitespace">    </span><span class="mi">347</span>             <span class="n">parse_constant</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_pairs_hook</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">kw</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">348</span>         <span class="k">return</span> <span class="n">_default_decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">349</span>     <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">350</span>         <span class="bp">cls</span> <span class="o">=</span> <span class="n">JSONDecoder</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">decode</span><span class="nt">(self, s, _w)</span>
-<span class="g g-Whitespace">    </span><span class="mi">335</span> 
-<span class="g g-Whitespace">    </span><span class="mi">336</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">337</span><span class="s2">         obj, end = self.raw_decode(s, idx=_w(s, 0).end())</span>
-<span class="g g-Whitespace">    </span><span class="mi">338</span><span class="s2">         end = _w(s, end).end()</span>
-<span class="g g-Whitespace">    </span><span class="mi">339</span><span class="s2">         if end != len(s):</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">raw_decode</span><span class="nt">(self, s, idx)</span>
-<span class="g g-Whitespace">    </span><span class="mi">353</span><span class="s2">             obj, end = self.scan_once(s, idx)</span>
-<span class="g g-Whitespace">    </span><span class="mi">354</span><span class="s2">         except StopIteration as err:</span>
-<span class="ne">--&gt; </span><span class="mi">355</span><span class="s2">             raise JSONDecodeError(&quot;Expecting value&quot;, s, err.value) from None</span>
-<span class="g g-Whitespace">    </span><span class="mi">356</span><span class="s2">         return obj, end</span>
-
-<span class="ne">JSONDecodeError</span>: Expecting value: line 1 column 1 (char 0)
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There were </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">}</span><span class="s2"> observations reported in the last 7 days.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>There were 740 observations reported in the last 7 days.
 </pre></div>
 </div>
 </div>
@@ -429,6 +397,124 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>speciesCode</th>
+      <th>comName</th>
+      <th>sciName</th>
+      <th>locId</th>
+      <th>locName</th>
+      <th>obsDt</th>
+      <th>howMany</th>
+      <th>lat</th>
+      <th>lng</th>
+      <th>obsValid</th>
+      <th>obsReviewed</th>
+      <th>locationPrivate</th>
+      <th>subId</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>brdowl</td>
+      <td>Barred Owl</td>
+      <td>Strix varia</td>
+      <td>L17010398</td>
+      <td>1–99 Pearl St, Cape Elizabeth US-ME (43.5988,-...</td>
+      <td>2021-11-30 23:57</td>
+      <td>1.0</td>
+      <td>43.598783</td>
+      <td>-70.227387</td>
+      <td>True</td>
+      <td>False</td>
+      <td>True</td>
+      <td>S98305534</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>tunswa</td>
+      <td>Tundra Swan</td>
+      <td>Cygnus columbianus</td>
+      <td>L169834</td>
+      <td>Funk Bottoms Wildlife Area</td>
+      <td>2021-11-30 23:43</td>
+      <td>21.0</td>
+      <td>40.752422</td>
+      <td>-82.105816</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>S98305336</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>grhowl</td>
+      <td>Great Horned Owl</td>
+      <td>Bubo virginianus</td>
+      <td>L5471103</td>
+      <td>Home</td>
+      <td>2021-11-30 23:30</td>
+      <td>1.0</td>
+      <td>39.773671</td>
+      <td>-75.692240</td>
+      <td>True</td>
+      <td>False</td>
+      <td>True</td>
+      <td>S98305105</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>shshaw</td>
+      <td>Sharp-shinned Hawk</td>
+      <td>Accipiter striatus</td>
+      <td>L169834</td>
+      <td>Funk Bottoms Wildlife Area</td>
+      <td>2021-11-30 23:01</td>
+      <td>1.0</td>
+      <td>40.752422</td>
+      <td>-82.105816</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>S98304709</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>brnowl</td>
+      <td>Barn Owl</td>
+      <td>Tyto alba</td>
+      <td>L568689</td>
+      <td>Lake Wichita (Archer Co.)</td>
+      <td>2021-11-30 22:22</td>
+      <td>1.0</td>
+      <td>33.830834</td>
+      <td>-98.551744</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>S98305001</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>There are always privacy considerations when using geographical data. Here, we not only have latitudes and longitudes, but also users’ nicknames for those locations. In some cases, those are full addresses. In others, they may leak some personal information (see: <code class="docutils literal notranslate"><span class="pre">Ron's</span> <span class="pre">yard</span></code>).</p>
 <p>We see this addressed in <a class="reference external" href="https://support.ebird.org/en/support/solutions/articles/48000948757-ebird-faqs#anchorhidehome">their documentation</a>. However, I’d consider the default insecure: “you can rename the location so your address is not visible. You can also place or move the location pin to somewhere close by along your street”. It’s a hard problem for a scientific project relying on the accuracy of geolocation data, however. Another solution may be to truncate the accuracy of the the coordinates for public API users.</p>
@@ -436,6 +522,11 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;comName&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>
@@ -447,6 +538,60 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>speciesCode</th>
+      <th>comName</th>
+      <th>sciName</th>
+      <th>locId</th>
+      <th>locName</th>
+      <th>obsDt</th>
+      <th>howMany</th>
+      <th>lat</th>
+      <th>lng</th>
+      <th>obsValid</th>
+      <th>obsReviewed</th>
+      <th>locationPrivate</th>
+      <th>subId</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>86</th>
+      <td>rethaw</td>
+      <td>Red-tailed Hawk</td>
+      <td>Buteo jamaicensis</td>
+      <td>L17009907</td>
+      <td>Cleveland National Forest, Silverado US-CA (33...</td>
+      <td>2021-11-30 18:01</td>
+      <td>1.0</td>
+      <td>33.75194</td>
+      <td>-117.575963</td>
+      <td>True</td>
+      <td>False</td>
+      <td>True</td>
+      <td>S98302544</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -461,6 +606,9 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/bird_16_0.png" src="../_images/bird_16_0.png" />
 </div>
 </div>
 </div>
