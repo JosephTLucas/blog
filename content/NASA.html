@@ -559,7 +559,7 @@ dtype: int64
 <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">patent</span><span class="p">[</span><span class="s2">&quot;source&quot;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="n">patent</span><span class="p">[</span><span class="s2">&quot;category&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
     <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;barh&quot;</span><span class="p">,</span> <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s2">&quot;Dark2&quot;</span>
 <span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;count&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;count&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;NASA: Category of Patents by Source&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -651,6 +651,7 @@ dtype: int64
     <span class="n">counterclock</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span>
     <span class="n">explode</span><span class="o">=</span><span class="n">v</span><span class="p">,</span>
+    <span class="n">shadow</span><span class="o">=</span><span class="kc">True</span>
 <span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;NASA Software by Hosting Website&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
