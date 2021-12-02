@@ -33,6 +33,7 @@ jobs:
     - name: Build the book
       env: 
         EBIRD_API: ${{ secrets.EBIRD_API }}
+        NASA_API: ${{ secrets.NASA_API }}
       run: |
         jupyter-book build .
 
