@@ -2,7 +2,7 @@
 
 Documenting bits of knowledge accumulated through my intellectual wanderings.
 
-Interested in the intersection of information security and data science.
+Currently working through [Advent of Code](https://adventofcode.com/)!
 
 ## About Me
 
