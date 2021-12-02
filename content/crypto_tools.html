@@ -384,7 +384,7 @@
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">start</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">end</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Both alphabets must be the same length&quot;</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">start</span><span class="p">):</span>
-        <span class="n">given</span> <span class="o">=</span> <span class="n">given</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">given</span> <span class="o">=</span> <span class="n">given</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">end</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">x</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">given</span>
 </pre></div>
 </div>
@@ -393,32 +393,32 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">en_freq</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;e&quot;</span><span class="p">:</span> <span class="mf">0.12</span><span class="p">,</span>
-    <span class="s2">&quot;t&quot;</span><span class="p">:</span> <span class="mf">0.091</span><span class="p">,</span>
-    <span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mf">0.0812</span><span class="p">,</span>
+    <span class="s2">&quot;e&quot;</span><span class="p">:</span> <span class="mf">0.1201</span><span class="p">,</span>
+    <span class="s2">&quot;t&quot;</span><span class="p">:</span> <span class="mf">0.0911</span><span class="p">,</span>
+    <span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mf">0.0813</span><span class="p">,</span>
     <span class="s2">&quot;o&quot;</span><span class="p">:</span> <span class="mf">0.0768</span><span class="p">,</span>
     <span class="s2">&quot;i&quot;</span><span class="p">:</span> <span class="mf">0.0731</span><span class="p">,</span>
     <span class="s2">&quot;n&quot;</span><span class="p">:</span> <span class="mf">0.0695</span><span class="p">,</span>
-    <span class="s2">&quot;s&quot;</span><span class="p">:</span> <span class="mf">0.06280000000000001</span><span class="p">,</span>
+    <span class="s2">&quot;s&quot;</span><span class="p">:</span> <span class="mf">0.0628</span><span class="p">,</span>
     <span class="s2">&quot;r&quot;</span><span class="p">:</span> <span class="mf">0.0602</span><span class="p">,</span>
     <span class="s2">&quot;h&quot;</span><span class="p">:</span> <span class="mf">0.0592</span><span class="p">,</span>
     <span class="s2">&quot;d&quot;</span><span class="p">:</span> <span class="mf">0.0432</span><span class="p">,</span>
     <span class="s2">&quot;l&quot;</span><span class="p">:</span> <span class="mf">0.0398</span><span class="p">,</span>
     <span class="s2">&quot;u&quot;</span><span class="p">:</span> <span class="mf">0.0288</span><span class="p">,</span>
     <span class="s2">&quot;c&quot;</span><span class="p">:</span> <span class="mf">0.0271</span><span class="p">,</span>
-    <span class="s2">&quot;m&quot;</span><span class="p">:</span> <span class="mf">0.026099999999999998</span><span class="p">,</span>
-    <span class="s2">&quot;f&quot;</span><span class="p">:</span> <span class="mf">0.023</span><span class="p">,</span>
-    <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="mf">0.021099999999999997</span><span class="p">,</span>
+    <span class="s2">&quot;m&quot;</span><span class="p">:</span> <span class="mf">0.0261</span><span class="p">,</span>
+    <span class="s2">&quot;f&quot;</span><span class="p">:</span> <span class="mf">0.0230</span><span class="p">,</span>
+    <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="mf">0.0211</span><span class="p">,</span>
     <span class="s2">&quot;w&quot;</span><span class="p">:</span> <span class="mf">0.0209</span><span class="p">,</span>
     <span class="s2">&quot;g&quot;</span><span class="p">:</span> <span class="mf">0.0203</span><span class="p">,</span>
     <span class="s2">&quot;p&quot;</span><span class="p">:</span> <span class="mf">0.0182</span><span class="p">,</span>
     <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mf">0.0149</span><span class="p">,</span>
     <span class="s2">&quot;v&quot;</span><span class="p">:</span> <span class="mf">0.0111</span><span class="p">,</span>
     <span class="s2">&quot;k&quot;</span><span class="p">:</span> <span class="mf">0.0069</span><span class="p">,</span>
-    <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="mf">0.0017000000000000001</span><span class="p">,</span>
+    <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="mf">0.0017</span><span class="p">,</span>
     <span class="s2">&quot;q&quot;</span><span class="p">:</span> <span class="mf">0.0011</span><span class="p">,</span>
-    <span class="s2">&quot;j&quot;</span><span class="p">:</span> <span class="mf">0.001</span><span class="p">,</span>
-    <span class="s2">&quot;z&quot;</span><span class="p">:</span> <span class="mf">0.0007000000000000001</span><span class="p">,</span>
+    <span class="s2">&quot;j&quot;</span><span class="p">:</span> <span class="mf">0.0010</span><span class="p">,</span>
+    <span class="s2">&quot;z&quot;</span><span class="p">:</span> <span class="mf">0.0007</span><span class="p">,</span>
 <span class="p">}</span>
 </pre></div>
 </div>
