@@ -4,6 +4,10 @@
 format: jb-book
 root: intro
 parts:
+  - caption: Adversarial Machine Learning
+    chapters:
+    - file: content/HackThisAI
+    - file: content/easy_credit_check
   - caption: External Writing
     chapters:
     - file: content/interview_with_xinof
@@ -11,7 +15,6 @@ parts:
     - file: content/matplotblog
   - caption: Data Science
     chapters:
-    - file: content/labeling
     - file: content/sklearn_sprint
     - file: content/git_scraping
     - file: content/bird
