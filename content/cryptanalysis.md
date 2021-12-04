@@ -2,7 +2,7 @@
 
 ## Completed
 
-- [Understanding Cryptography: A Textbook for Students and Practitioners](https://www.amazon.com/dp/3642446493): Really great resource for understanding the math and logic involved in modern crypto. I read through and took notes, but need to go back and do many of the exercises. It professes to not be a cryptanalysis book, but does a good job of covering the weaknesses and common attacks for many schemes.
+- [Understanding Cryptography: A Textbook for Students and Practitioners](https://www.amazon.com/dp/3642446493): Great resource for understanding the math and logic involved in modern crypto. I read through and took notes, but need to go back and do many of the exercises. It professes to not be a cryptanalysis book, but does a good job of covering the weaknesses and common attacks for many schemes.
 
 - [The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography](https://www.amazon.com/dp/0385495323): Entertaining read. I would consider recommending to non-computer friends, but still a good survey of the field.
 
