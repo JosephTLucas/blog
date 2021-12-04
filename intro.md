@@ -32,3 +32,5 @@ Currently working through [Advent of Code](https://adventofcode.com/)!
 [Oh Shit, Git!?!](https://ohshitgit.com/):  For when you stray from the happy path.
 
 [Explain Git with D3](https://onlywei.github.io/explain-git-with-d3/): Great interactive graph visualizations for Git concepts.
+
+[Pandas Tutor](https://pandastutor.com/vis.html): Great way to teach/understand the logic of [pandas dataframe](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html) operations.
