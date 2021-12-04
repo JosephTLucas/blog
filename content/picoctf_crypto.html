@@ -472,6 +472,47 @@ This oracle will take anything you give it and decrypt using RSA. It will not ac
 </div>
 </div>
 </div>
+<p>RSA is malleable (Paar 192). We can transform the ciphertext into another ciphertext which is a known transformation of the plaintext… This can be achieved in RSA if the attacker replaces the ciphertext <code class="docutils literal notranslate"><span class="pre">y</span></code> with <code class="docutils literal notranslate"><span class="pre">(s**e)*y</span></code> with an integer <code class="docutils literal notranslate"><span class="pre">s</span></code>. For this example, we’ll double the cipher text (and know that we have to half the result returned from the oracle).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">c</span> <span class="o">*</span> <span class="p">(</span><span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Give <code class="docutils literal notranslate"><span class="pre">x</span></code> to Oracle and receive <code class="docutils literal notranslate"><span class="pre">doubled</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doubled</span> <span class="o">=</span> <span class="mi">580550060391700078946913236734911770139931497702556153513487440893406629034802718534645538074938502890768853279675297196794</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">doubled</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>290275030195850039473456618367455885069965748851278076756743720446703314517401359267322769037469251445384426639837648598397
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bytearray</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="nb">format</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;picoCTF{m4yb3_Th0se_m3s54g3s_4r3_difurrent_1772735}&#39;
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
