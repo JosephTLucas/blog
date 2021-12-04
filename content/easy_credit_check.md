@@ -33,4 +33,4 @@ I wonder how well they do data validation?
 
 ![flag](img/flag.JPG)
 
-Apprently poorly! It looks like they don't bound/scale there target variable (`Score`) on a reasonable range. By increasing this an absurd amount, we're able to change the decision boundary and win!
+Apprently poorly! It looks like they don't bound/scale the target variable (`Score`) on a reasonable range. By increasing this an absurd amount, we're able to change the decision boundary and win!
