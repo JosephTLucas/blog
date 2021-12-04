@@ -24,9 +24,7 @@ parts:
     chapters:
     - file: content/cryptanalysis
     - file: content/crypto_tools
-    - file: content/mod26
-    - file: content/the_numbers
-    - file: content/no_padding_no_problem
+    - file: content/picoctf_crypto
   - caption: Recommended Reading
     chapters:
     - file: content/nonfiction
