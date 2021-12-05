@@ -1,4 +1,4 @@
-# HackThisAI
+# [HackThisAI](https://github.com/JosephTLucas/HackThisAI)
 
 I have been contemplating building a capture-the-flag competition specifically for Adversarial Machine Learning (AML). AML includes attempts to evade, poison, or steal/learn about machine learning models. It covers a range of activities and is a young, growing field of study.
 

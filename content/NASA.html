@@ -407,6 +407,47 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">JSONDecodeError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1592</span><span class="o">/</span><span class="mf">1254835711.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://api.nasa.gov/techtransfer/patent/&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;api_key&quot;</span><span class="p">:</span> <span class="n">key</span><span class="p">})</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">data</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">patent</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_records</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">data</span><span class="p">[</span><span class="s2">&quot;results&quot;</span><span class="p">],</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/requests/models.py</span> in <span class="ni">json</span><span class="nt">(self, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">908</span>                     <span class="c1"># used.</span>
+<span class="g g-Whitespace">    </span><span class="mi">909</span>                     <span class="k">pass</span>
+<span class="ne">--&gt; </span><span class="mi">910</span>         <span class="k">return</span> <span class="n">complexjson</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">911</span> 
+<span class="g g-Whitespace">    </span><span class="mi">912</span>     <span class="nd">@property</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/json/__init__.py</span> in <span class="ni">loads</span><span class="nt">(s, encoding, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">346</span>             <span class="n">parse_int</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">parse_float</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span>
+<span class="g g-Whitespace">    </span><span class="mi">347</span>             <span class="n">parse_constant</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_pairs_hook</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">kw</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">348</span>         <span class="k">return</span> <span class="n">_default_decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">349</span>     <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">350</span>         <span class="bp">cls</span> <span class="o">=</span> <span class="n">JSONDecoder</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">decode</span><span class="nt">(self, s, _w)</span>
+<span class="g g-Whitespace">    </span><span class="mi">335</span> 
+<span class="g g-Whitespace">    </span><span class="mi">336</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">337</span><span class="s2">         obj, end = self.raw_decode(s, idx=_w(s, 0).end())</span>
+<span class="g g-Whitespace">    </span><span class="mi">338</span><span class="s2">         end = _w(s, end).end()</span>
+<span class="g g-Whitespace">    </span><span class="mi">339</span><span class="s2">         if end != len(s):</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">raw_decode</span><span class="nt">(self, s, idx)</span>
+<span class="g g-Whitespace">    </span><span class="mi">353</span><span class="s2">             obj, end = self.scan_once(s, idx)</span>
+<span class="g g-Whitespace">    </span><span class="mi">354</span><span class="s2">         except StopIteration as err:</span>
+<span class="ne">--&gt; </span><span class="mi">355</span><span class="s2">             raise JSONDecodeError(&quot;Expecting value&quot;, s, err.value) from None</span>
+<span class="g g-Whitespace">    </span><span class="mi">356</span><span class="s2">         return obj, end</span>
+
+<span class="ne">JSONDecodeError</span>: Expecting value: line 1 column 1 (char 0)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -477,15 +518,15 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>source
-LARC    216
+LARC    229
 GSFC    140
 ARC     109
-GRC     100
+GRC     101
 MSFC     58
-JSC      48
-KSC      30
+JSC      50
+KSC      31
+JPL      20
 DFRC     19
-JPL      11
 SSC       5
 dtype: int64
 </pre></div>
@@ -503,21 +544,22 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>category
-materials and coatings                 111
-sensors                                101
-aerospace                               78
-mechanical and fluid systems            66
-optics                                  56
-electrical and electronics              43
+materials and coatings                 118
+sensors                                102
+aerospace                               79
+mechanical and fluid systems            67
+optics                                  58
+electrical and electronics              44
 information technology and software     43
 manufacturing                           41
-health medicine and biotechnology       37
+health medicine and biotechnology       40
 robotics automation and control         35
-instrumentation                         32
-power generation and storage            30
-communications                          27
+instrumentation                         34
+power generation and storage            33
+communications                          29
 environment                             24
 propulsion                              12
+undefined                                3
 dtype: int64
 </pre></div>
 </div>
@@ -534,26 +576,26 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>source  category                           
-LARC    materials and coatings                 50
-        sensors                                38
-        aerospace                              30
+LARC    materials and coatings                 56
+        sensors                                39
+        aerospace                              31
 GSFC    optics                                 29
 GRC     materials and coatings                 27
-GSFC    information technology and software    20
 ARC     aerospace                              20
-GSFC    electrical and electronics             17
+GSFC    information technology and software    20
 MSFC    mechanical and fluid systems           17
+GSFC    electrical and electronics             17
 LARC    manufacturing                          16
 GSFC    sensors                                15
-LARC    mechanical and fluid systems           15
+GRC     communications                         15
+LARC    mechanical and fluid systems           14
 MSFC    manufacturing                          14
-GRC     communications                         14
 LARC    instrumentation                        13
 ARC     health medicine and biotechnology      13
+LARC    optics                                 13
 GSFC    aerospace                              12
-LARC    optics                                 12
 ARC     information technology and software    12
-GRC     electrical and electronics             11
+JSC     health medicine and biotechnology      11
 dtype: int64
 </pre></div>
 </div>
