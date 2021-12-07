@@ -309,25 +309,8 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="hackthisai-easy-credit-check">
 <h1>HackThisAI: easy_credit_check<a class="headerlink" href="#hackthisai-easy-credit-check" title="Permalink to this headline">¶</a></h1>
-<p>This is a walkthrough of the easy <a class="reference external" href="https://github.com/JosephTLucas/HackThisAI">HackThisAI</a> challenge: easy_credit_check.</p>
-<p>We see the instructions here.<br />
-<img alt="instructions" src="../_images/instructions.JPG" /></p>
-<p>As listed on the main README, the docker component of this is because it’s a prototype. There’ll be a much more straightforward process when the CTF is a web service.</p>
-<p>We see from the instructions that we need to make a small change to <code class="docutils literal notranslate"><span class="pre">Mall_Customers.csv</span></code>, rename the file to <code class="docutils literal notranslate"><span class="pre">tamper.csv</span></code> and see if we can get a 19 year old making $15k approved.</p>
-<p>Let’s look at the data:<br />
-<img alt="data_sample" src="../_images/data_sample.JPG" /></p>
-<p>Okay, so we see that each customer has an <code class="docutils literal notranslate"><span class="pre">ID</span></code>, “<code class="docutils literal notranslate"><span class="pre">Genre</span></code>” (looks like gender), <code class="docutils literal notranslate"><span class="pre">Age</span></code>, <code class="docutils literal notranslate"><span class="pre">Income</span></code>, and <code class="docutils literal notranslate"><span class="pre">Spending</span> <span class="pre">Score</span></code>. From the prompt, we know that we want to get our spending score above 90. What is it now? Let’s just <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">Mall_Customers.csv</span> <span class="pre">tamper.csv</span></code> and see what our score is right now.<br />
-<img alt="status_quo" src="../_images/status_quo.JPG" /></p>
-<p>Okay, so it doesn’t tell us our score, but we can assume it’s below 90. I noticed that the first record in the dataset applies directly to us <code class="docutils literal notranslate"><span class="pre">Age:19,</span> <span class="pre">Income:</span> <span class="pre">15</span></code>. We’re assuming this is training data… maybe a supervised regression problem. This is a data poisoning attack. If we change this record to what we want, maybe that’ll reflect in the trained model.</p>
-<p><img alt="first_record" src="../_images/first_record.JPG" /></p>
-<p>Now let’s try again.</p>
-<p><img alt="flagrant" src="../_images/flagrant.JPG" /></p>
-<p>Oh man, it looks like there is some kind of data integrity check… Let’s try again, but maybe this time we’ll just add a record.</p>
-<p><img alt="1tail" src="../_images/1tail.JPG" /></p>
-<p>Hmm… we still don’t qualify. We can see that <code class="docutils literal notranslate"><span class="pre">100</span></code> seems to be the max <code class="docutils literal notranslate"><span class="pre">Score</span></code>. Maybe we should increase from <code class="docutils literal notranslate"><span class="pre">90</span></code> to <code class="docutils literal notranslate"><span class="pre">100</span></code> (give ourselves some margin)? Nope, still doesn’t work.</p>
-<p>I wonder how well they do data validation?</p>
-<p><img alt="flag" src="../_images/flag.JPG" /></p>
-<p>Apprently poorly! It looks like they don’t bound/scale the target variable (<code class="docutils literal notranslate"><span class="pre">Score</span></code>) on a reasonable range. By increasing this an absurd amount, we’re able to change the decision boundary and win!</p>
+<p>A walkthrough of the easy <a class="reference external" href="https://github.com/JosephTLucas/HackThisAI">HackThisAI</a> challenge: easy_credit_check is available in <a class="reference external" href="https://github.com/JosephTLucas/HackThisAI/blob/main/helper_notebook.ipynb">this notebook</a>.</p>
+<p>Even if you choose to not execute the challenge as a notebook, the cell output displayed in GitHub should give you some ideas about how to complete the challenge.</p>
 </div>
 
     <script type="text/x-thebe-config">
