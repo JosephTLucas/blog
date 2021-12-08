@@ -19,6 +19,8 @@ Currently working through [Advent of Code](https://adventofcode.com/)!
 
 [Compiler Explorer](https://godbolt.org/):  Compare code from a variety of languages with the compiled assembly with different compiler flags in a hihglighted, side-by-side format.  Very useful if you are learning software reverse engineering.
 
+[SQL Fiddle](http://sqlfiddle.com/): A tool for easy online testing and sharing of database problems and their solutions.
+
 [Select Star SQL](https://selectstarsql.com/):  Gentle, relevant, and interactive introduction to SQL.  Learn by solving a real problem with real data.
 
 [SQL Murder Mystery](https://mystery.knightlab.com/): Another engaging introduction to SQL.
