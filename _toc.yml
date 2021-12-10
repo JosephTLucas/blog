@@ -19,7 +19,6 @@ parts:
     chapters:
     - file: content/sklearn_sprint
     - file: content/git_scraping
-    - file: content/bird
     - file: content/NASA
   - caption: Cryptography / Cryptanalysis
     chapters:
