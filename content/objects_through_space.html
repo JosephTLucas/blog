@@ -379,7 +379,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cls</span><span class="o">.</span><span class="n">get_depth</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Furthermore, since the players are going to want to submit <em>trained</em> models, I needed to not only support importing a <code class="docutils literal notranslate"><span class="pre">Class</span></code>, but more specifically an <code class="docutils literal notranslate"><span class="pre">instance</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">Class</span></code>. So maybe we want to shoot the laser, then save and submit the model.</p>
+<p>Furthermore, since the players are going to want to submit <em>trained</em> models, I needed to not only support importing a <code class="docutils literal notranslate"><span class="pre">Class</span></code>, but more specifically an <code class="docutils literal notranslate"><span class="pre">instance</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">Class</span></code>. So let’s shoot the laser, then save and submit the model.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sd</span> <span class="o">=</span> <span class="n">Star_Destroyer</span><span class="p">()</span>
 <span class="n">sd</span><span class="o">.</span><span class="n">shoot_laser</span><span class="p">()</span>
 </pre></div>
@@ -389,13 +389,16 @@
 <div class="section" id="pickle">
 <h2>Pickle<a class="headerlink" href="#pickle" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://docs.python.org/3/library/pickle.html">Pickle</a> is the standard way to do this.</p>
+<hr class="docutils" />
+<p>It’s worth reading the first several paragraphs of the pickle documentation. They discuss marshalling, security and binary vs. text serialization.</p>
+<hr class="docutils" />
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
 
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;setup/thing.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">sd</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>After saving the item to a file, the player can send it using normal HTTP methods. Let’s take a look at how we’d import and use the object.</p>
+<p>After saving the item to a file, the player can send it using normal HTTP methods. After we receive it, we’d expect to be able to <code class="docutils literal notranslate"><span class="pre">load</span></code> and use the pickle.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
@@ -408,7 +411,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1704</span><span class="o">/</span><span class="mf">2159759763.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1769</span><span class="o">/</span><span class="mf">2159759763.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> 
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;setup/thing.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
 <span class="ne">----&gt; </span><span class="mi">4</span>     <span class="n">sd</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
@@ -418,7 +421,11 @@
 </div>
 </div>
 </div>
-<p>Hmm, what do we make of that error? To <a class="reference external" href="https://stackoverflow.com/questions/27732354/unable-to-load-files-using-pickle-and-multiple-modules">Stack Overflow</a>! Okay…. looks like maybe we need to import our class and dump it from a helper.</p>
+<p>Hmm, what do we make of that error? To <a class="reference external" href="https://stackoverflow.com/questions/27732354/unable-to-load-files-using-pickle-and-multiple-modules">Stack Overflow</a>!</p>
+<blockquote>
+<div><p>Remember that pickle doesn’t actually store information about how a class/object is constructed, and needs access to the class when unpickling.</p>
+</div></blockquote>
+<p>Okay…. looks like maybe we need to import our class and dump it from a helper.</p>
 <p>A helper might look like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
 
@@ -431,7 +438,7 @@
     <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">sd</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Does this new object perform better after being yeeted across the internet?</p>
+<p>Does this new object perform better after being sent across the internet?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
@@ -454,11 +461,11 @@
 </div>
 </div>
 </div>
-<p>Huh, still doesn’t work. It looks like the <code class="docutils literal notranslate"><span class="pre">pickled</span></code> object still references the old namespace. That won’t work for the CTF because we don’t know what namespaces existed in the players context. We need something totally independent.</p>
+<p>Huh, still doesn’t work. It looks like the <code class="docutils literal notranslate"><span class="pre">pickled</span></code> object still references the old namespace. Severak if the solutions presented in the Stack Overflow link discuss writing a customer unpickler. However, this technique still acts as a redirection for import paths. That won’t work for the CTF because we don’t know what namespaces existed in the players context. Furthermore, we might not even have access to their various imports. We need something totally independent.</p>
 </div>
 <div class="section" id="joblib">
 <h2>Joblib<a class="headerlink" href="#joblib" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://joblib.readthedocs.io/en/latest/">Joblib</a> is another great library for doing this. In fact, it’s <a class="reference external" href="https://scikit-learn.org/stable/modules/model_persistence.html">recommended by Scikit-Learn</a> because it is “more efficient on objects that carry large numpy arrays internally as is often the case for fitted scikit-learn estimators”.</p>
+<p><a class="reference external" href="https://joblib.readthedocs.io/en/latest/">Joblib</a> is another great library for binary serialization. In fact, it’s <a class="reference external" href="https://scikit-learn.org/stable/modules/model_persistence.html">recommended by Scikit-Learn</a> because it is “more efficient on objects that carry large numpy arrays internally as is often the case for fitted scikit-learn estimators”.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">joblib</span>
@@ -523,7 +530,7 @@
 </div>
 </div>
 </div>
-<p>Unfortunately, <a class="reference external" href="https://joblib.readthedocs.io/en/latest/persistence.html">“joblib.dump() and joblib.load() are based on the Python pickle serialization model”</a>. There are no wins here.</p>
+<p>Unfortunately while it is more efficient, <a class="reference external" href="https://joblib.readthedocs.io/en/latest/persistence.html">“joblib.dump() and joblib.load() are based on the Python pickle serialization model”</a>. We won’t find our solution here.</p>
 </div>
 <div class="section" id="dill">
 <h2>Dill<a class="headerlink" href="#dill" title="Permalink to this headline">¶</a></h2>
@@ -556,7 +563,7 @@
 </div>
 </div>
 </div>
-<p>Win. We can import the <code class="docutils literal notranslate"><span class="pre">Star_Destroyer</span></code> object and it even has the state it had when it was exported (we’d fired the laser once).</p>
+<p>That’s what we wanted to see! We can import the <code class="docutils literal notranslate"><span class="pre">Star_Destroyer</span></code> object and it even has the state it had when it was exported (we’d fired the laser once).</p>
 </div>
 <div class="section" id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
