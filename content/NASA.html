@@ -371,6 +371,18 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1769</span><span class="o">/</span><span class="mf">4043235366.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">requests</span>
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">wordcloud</span> <span class="kn">import</span> <span class="n">WordCloud</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;wordcloud&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="get-data">
 <h2>Get data<a class="headerlink" href="#get-data" title="Permalink to this headline">¶</a></h2>
@@ -477,15 +489,15 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>source
-LARC    213
+LARC    229
 GSFC    140
 ARC     109
-GRC     100
+GRC     101
 MSFC     58
-JSC      48
-KSC      30
+JSC      50
+KSC      31
+JPL      20
 DFRC     19
-JPL      11
 SSC       5
 dtype: int64
 </pre></div>
@@ -503,21 +515,22 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>category
-materials and coatings                 110
-sensors                                 99
+materials and coatings                 118
+sensors                                102
 aerospace                               79
-mechanical and fluid systems            66
-optics                                  56
-electrical and electronics              43
-information technology and software     42
+mechanical and fluid systems            67
+optics                                  58
+electrical and electronics              44
+information technology and software     43
 manufacturing                           41
-health medicine and biotechnology       37
+health medicine and biotechnology       40
 robotics automation and control         35
-instrumentation                         32
-power generation and storage            30
-communications                          27
+instrumentation                         34
+power generation and storage            33
+communications                          29
 environment                             24
 propulsion                              12
+undefined                                3
 dtype: int64
 </pre></div>
 </div>
@@ -534,26 +547,26 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>source  category                           
-LARC    materials and coatings                 49
-        sensors                                36
+LARC    materials and coatings                 56
+        sensors                                39
         aerospace                              31
 GSFC    optics                                 29
 GRC     materials and coatings                 27
-GSFC    information technology and software    20
 ARC     aerospace                              20
-GSFC    electrical and electronics             17
+GSFC    information technology and software    20
 MSFC    mechanical and fluid systems           17
+GSFC    electrical and electronics             17
 LARC    manufacturing                          16
-        mechanical and fluid systems           15
 GSFC    sensors                                15
+GRC     communications                         15
+LARC    mechanical and fluid systems           14
 MSFC    manufacturing                          14
-GRC     communications                         14
 LARC    instrumentation                        13
 ARC     health medicine and biotechnology      13
-        information technology and software    12
-LARC    optics                                 12
+LARC    optics                                 13
 GSFC    aerospace                              12
-        mechanical and fluid systems           11
+ARC     information technology and software    12
+JSC     health medicine and biotechnology      11
 dtype: int64
 </pre></div>
 </div>
