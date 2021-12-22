@@ -8,6 +8,7 @@ parts:
     chapters:
     - file: content/HackThisAI
     - file: content/easy_credit_check
+    - file: content/walthrough_flyin_pig
     - file: content/objects_through_space
     - file: content/aml_references
   - caption: External Writing
