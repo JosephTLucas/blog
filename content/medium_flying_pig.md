@@ -4,4 +4,4 @@ A walkthrough of the easy [HackThisAI](https://github.com/JosephTLucas/HackThisA
 
 Even if you choose to not execute the challenge as a notebook, the cell output displayed in GitHub should give you some ideas about how to complete the challenge.
 
-* This notebook was built locally, so you may need to tinker with some paths (adding your own airplane image, for example).
+\* This notebook was built locally, so you may need to tinker with some paths (adding your own airplane image, for example).
