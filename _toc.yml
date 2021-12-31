@@ -11,6 +11,7 @@ parts:
     - file: content/medium_flying_pig
     - file: content/objects_through_space
     - file: content/aml_references
+    - file: aml_reading_notes
   - caption: External Writing
     chapters:
     - file: content/interview_with_xinof
