@@ -6,10 +6,9 @@ Notes to accompany [this AML reading list](https://nicholas.carlini.com/writing/
 
 ### [Evasion Attacks Against Machine Learning at Test Time](https://arxiv.org/pdf/1708.06131.pdf)
 
-*Important contributions:*
-Mimicry -- imitate features of known legitimate samples
-
-Kernel Density Estimation -- favor attacks in densely populated regions
+**Important contributions:**  
+Mimicry -- imitate features of known legitimate samples  
+Kernel Density Estimation -- favor attacks in densely populated regions  
 
 > classical performance evaluation techniques are not suitable to reliably assess the security of learning algorithms, i.e. the performance degradation caused by carefully crafted attacks.
 
