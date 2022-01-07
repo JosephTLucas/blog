@@ -2,8 +2,6 @@
 
 Documenting bits of knowledge accumulated through my intellectual wanderings.
 
-Currently working through [Advent of Code](https://adventofcode.com/)!
-
 ## About Me
 
 [Twitter](https://twitter.com/josephtlucas)
