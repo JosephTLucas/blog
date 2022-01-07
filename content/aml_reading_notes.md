@@ -75,6 +75,37 @@ Canaries for alerting on illegitimate samples to detect ongoing adversarial test
 
 ### [The Limitations of Deep Learning in Adversarial Settings](https://arxiv.org/pdf/1511.07528.pdf)
 
+**Important contributions:**  
+General algo for modifying samples -> Use the forward derivative to generate the adversarial saliency map
+
+
+> instead of using these gradients to update network parameters as would normally be done, gradients are used to update the original input itself, which is subsequently misclassified
+
+> we craft adversarial samples by constructing a mapping from input perturbations to output variations
+
+> _forward derivative_: the Jacobian (all first order partial derivatives necessary for bach prop) of the function learned by the DNN... the forward derivative is used to construct adversarial saliency maps
+
+> forward derivatives are applicable in supervised and unsupervised systems
+
+I hadn't thought about test-time distinctions between these two target classes. Are the resulting classifiers fundamentally different?
+
+> _fooling image_: image with no source class that gets classified with high confidence in a targeted attack
+
+> knowledge of the architecture and weight parameters is sufficient to derive adversarial samples against acyclic feedforward DNNs
+
+> small input perturbations found using the forward derivative can induce large variations in the output
+
+> not all regions from the input domain are conducive to find adversarial samples and the forward derivative reduces the adversarial sample search space.
+
+This attack algorithm is still iterative... "repeat until misclassification or maximum distortion reached" -> noisy
+
+> the distortion introduced by reducing pixel intensities seems harder to detect by the human eye
+
+> humans still correctly classify adversarial samples crafted with a distortion smaller than 14.29%
+
+> removing pixels reduces the information entropy... greater absolute values of intensity variations are more confidently misclassified by the DNN
+
+
 ### [DeepFool: a simple and accurate method to fool deep neural networks](https://arxiv.org/pdf/1511.04599.pdf)
 
 ### [Towards Evaluating the Robustness of Neural Networks](https://arxiv.org/pdf/1608.04644.pdf)
