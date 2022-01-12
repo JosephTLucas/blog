@@ -69,6 +69,37 @@ Canaries for alerting on illegitimate samples to detect ongoing adversarial test
 
 ### [Intriguing properties of neural networks](https://arxiv.org/pdf/1312.6199.pdf)
 
+**Important contributions:**  
+1. The smoothness assumption underlying many kernel methods does not hold.
+2. It's the space, not the units, that hold the semantic representation
+3. Adversarial examples may generalize between networks and training sets -> transferability
+
+> While their expressiveness is the reason they succeed, it also causes them to learn uninterpretable solutions that could have counter-intuitive properties
+
+> First, we find there is no distinction between individual high level units and random linear combinations of high level units. It is the space, rather than the individual units, that contain the semantic information in the high layers of neural networks.
+
+> DNN learn mappings that are fairly discontinuous... the specific nature of these perturbations is not a random artifact of learning: the same perturbation can cause a different network, that was trained on a different subset of data, to misclassify the same input.
+
+> adversarial examples are relatively robust, and are shared by neural networks with varied number of layers, actions or trained on different subsets of training data... if we use one neural net to generate a set of adversarial examples, we find tha tthese examples are still statistically hard for another neural network even if it was trained differently
+
+> adversarial examples represent low-probability high-dimensional pockets in the manifold which are hard to efficiently find by simply randomly sampling the input around a given example.
+
+training-time deformations are inefficient and static through the entire training of the model
+
+> _hard negative mining_: identifying training examples which are given low probabilities by the model, but which should be high probability instead. The training set distribution is changed to emphasize these hard negatives
+
+> For all networks we studied, for each sample, we have always managed to generate very close, visually hard to distinguish, adversarial examples
+
+What's the real world impact here? What confidence intervals/SLAs can we provide to customers?
+
+> adversarial examples are somewhat universal and not just he results of overfitting to a particular model
+
+> back-feeding adversarial examples to training might improve generalization
+
+> adversarial examples for the higher layers seemed to be significantly more useful than those on the input or lower layers
+
+> regularization of the parameters, consisting of penalizing each upper Lipschitz bound, might help improve the generalization error of the networks
+
 ### [Explaining and Harnessing Adversarial Examples](https://arxiv.org/pdf/1412.6572.pdf)
 
 ## Attacks
@@ -109,3 +140,25 @@ This attack algorithm is still iterative... "repeat until misclassification or m
 ### [DeepFool: a simple and accurate method to fool deep neural networks](https://arxiv.org/pdf/1511.04599.pdf)
 
 ### [Towards Evaluating the Robustness of Neural Networks](https://arxiv.org/pdf/1608.04644.pdf)
+
+**Important Contributions:**
+1. Three new attacks not mitigated by defensive distillation -> proposes these attacks as a baseline
+
+
+> three new attack algorithms that are successful on both distilled and undistilled NN with 100% probability
+
+> _defensive distillation_: reduces existing attacks from 95% to 0.5%. Can be applied to any feed-forward NN and only requires a single re-training step. Replace softmax with a smoothed softmax. Use this to generate "soft training labels" which are used in the second iteration.
+
+> Adversarial generation algos available @ http://nicholas.carlini.com/code/nn_robust_attacks -> https://github.com/carlini/nn_robust_attacks
+
+Paper has a nice threat model section
+
+> Three different approaches for choosing a target class: average case (select from uniform), best case (class that was least difficult to attack), worst case (class that was hardest to attack)
+
+Paper has an interesting discussion about distance metrics (L0 - number of changes, L2 - euclidean distance, Linf - maximum budget)
+
+> adversarial examples exist is not due to blind spots in a highly non-linear neural network, but due only to the locally-linear nature of neural networks. -> linearity hypothesis
+
+> Fast Gradient sign is designed to be fast, not optimal... iterative gradient sign was found to produce superior results
+
+> DeepFool is untargeted and optimized on L2... produces closer adversarial examples than L-BFGS
