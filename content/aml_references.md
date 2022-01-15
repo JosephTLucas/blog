@@ -4,6 +4,8 @@
 - [Adversarial Robustness - Theory and Practice](https://adversarial-ml-tutorial.org/introduction/)
 - [Azure Counterfit](https://github.com/Azure/counterfit)
 - [Adversarial Machine Learning Reading List](https://nicholas.carlini.com/writing/2018/adversarial-machine-learning-reading-list.html)
+- [Privacy Raven](https://github.com/trailofbits/PrivacyRaven)
+- [Awesome Attacks on Machine Learning Privacy](https://github.com/stratosphereips/awesome-ml-privacy-attacks)
 - [CY 7790: Special Topics in Security and Privacy: Machine Learning Security and Privacy](https://www.ccs.neu.edu/home/alina/classes/Fall2021/)
 - [ECE1784H: Trustworthy Machine Learning](https://www.papernot.fr/teaching/f19-trustworthy-ml)
 - [6.883 Science of Deep Learning: Bridging Theory and Practice](https://people.csail.mit.edu/madry/6.883-Spring18/)
