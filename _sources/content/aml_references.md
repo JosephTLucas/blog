@@ -5,6 +5,7 @@
 - [Azure Counterfit](https://github.com/Azure/counterfit)
 - [Adversarial Machine Learning Reading List](https://nicholas.carlini.com/writing/2018/adversarial-machine-learning-reading-list.html)
 - [Privacy Raven](https://github.com/trailofbits/PrivacyRaven)
+- [Trustworthy Machine Learning](http://www.trustworthymachinelearning.com/)
 - [Awesome Attacks on Machine Learning Privacy](https://github.com/stratosphereips/awesome-ml-privacy-attacks)
 - [CY 7790: Special Topics in Security and Privacy: Machine Learning Security and Privacy](https://www.ccs.neu.edu/home/alina/classes/Fall2021/)
 - [ECE1784H: Trustworthy Machine Learning](https://www.papernot.fr/teaching/f19-trustworthy-ml)
