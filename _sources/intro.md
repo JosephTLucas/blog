@@ -19,6 +19,8 @@ Documenting bits of knowledge accumulated through my intellectual wanderings.
 
 [SQL Fiddle](http://sqlfiddle.com/): A tool for easy online testing and sharing of database problems and their solutions.
 
+[Use The Index, Luke](https://use-the-index-luke.com/): A site explaining SQL indexing to developers; nothing about administration.
+
 [Select Star SQL](https://selectstarsql.com/):  Gentle, relevant, and interactive introduction to SQL.  Learn by solving a real problem with real data.
 
 [SQL Murder Mystery](https://mystery.knightlab.com/): Another engaging introduction to SQL.
