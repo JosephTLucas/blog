@@ -38,3 +38,5 @@ Documenting bits of knowledge accumulated through my intellectual wanderings.
 [Learn Git Branching](https://learngitbranching.js.org): My go-to recommendation for folks learning git.
 
 [Pandas Tutor](https://pandastutor.com/vis.html): Great way to teach/understand the logic of [pandas dataframe](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html) operations.
+
+[Pythex](https://pythex.org/): Python regex helper
