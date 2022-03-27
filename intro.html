@@ -45,12 +45,11 @@
     <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -171,33 +170,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="content/git_scraping.html">
    Git Scraping
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="content/NASA.html">
-   NASA Data
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Cryptography / Cryptanalysis
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="content/cryptanalysis.html">
-   Cryptanalysis Curriculum
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="content/crypto_tools.html">
-   Crypto Tools
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="content/picoctf_crypto.html">
-   PicoCTF Crypto Challenges
   </a>
  </li>
 </ul>
@@ -394,8 +366,6 @@
 <p><a class="reference external" href="https://learngitbranching.js.org">Learn Git Branching</a>: My go-to recommendation for folks learning git.</p>
 <p><a class="reference external" href="https://pandastutor.com/vis.html">Pandas Tutor</a>: Great way to teach/understand the logic of <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html">pandas dataframe</a> operations.</p>
 <p><a class="reference external" href="https://pythex.org/">Pythex</a>: Python regex helper</p>
-</div>
-<div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
 </div>
