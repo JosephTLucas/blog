@@ -21,12 +21,6 @@ parts:
     chapters:
     - file: content/sklearn_sprint
     - file: content/git_scraping
-    - file: content/NASA
-  - caption: Cryptography / Cryptanalysis
-    chapters:
-    - file: content/cryptanalysis
-    - file: content/crypto_tools
-    - file: content/picoctf_crypto
   - caption: Recommended Reading
     chapters:
     - file: content/nonfiction
