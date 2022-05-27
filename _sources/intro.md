@@ -5,7 +5,10 @@ Documenting bits of knowledge accumulated through my intellectual wanderings.
 ## About Me
 
 [Twitter](https://twitter.com/josephtlucas)
+
 [LinkedIn](https://www.linkedin.com/in/josephtlucas/)
+
+[HackThisAI](https://hackthis.ai)
 
 
 - West Point Math

@@ -14,8 +14,11 @@ Open Spaces were a new concept for me, but (as others had advised me) one of the
 I attended lots of talks, but also didn't feel much pressure because I knew that they would all be posted on YouTube later. Here is a list of some of my favorites:
 
 [Building a Binary Extension](https://youtu.be/gROGDQakzas)
+
 [Demystifying Python's Internals](https://youtu.be/HYKGZunmF50)
+
 [hooking into the Import System](https://youtu.be/ziC_DlabFto)
+
 [Python for Threat Intelligence](https://youtu.be/Zf38qncahiU)
 
 and there were some that I missed due to conflicts (either with other talks or the open spaces mentioned above). I'm looking forward to watching them. And of course, there was [my talk about serialization formats](https://youtu.be/ygrjAGDU1J8).
