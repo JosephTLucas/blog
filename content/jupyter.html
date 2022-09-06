@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>What is a jupyter session anyway? &#8212; Blog</title>
+    <title>Cohabitating on a Jupyter session &#8212; Blog</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -180,7 +180,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   What is a jupyter session anyway?
+   Cohabitating on a Jupyter session
   </a>
  </li>
  <li class="toctree-l1">
@@ -394,7 +394,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>What is a jupyter session anyway?</h1>
+                <h1>Cohabitating on a Jupyter session</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -406,8 +406,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="what-is-a-jupyter-session-anyway">
-<h1>What is a jupyter session anyway?<a class="headerlink" href="#what-is-a-jupyter-session-anyway" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="cohabitating-on-a-jupyter-session">
+<h1>Cohabitating on a Jupyter session<a class="headerlink" href="#cohabitating-on-a-jupyter-session" title="Permalink to this headline">#</a></h1>
 <p>Instead of focusing on the password and token based authentication most folks are used to seeing as part of their JupyterLab interface, we’re going to take a deeper look at the internals. Come play along!</p>
 <ol class="simple">
 <li><p>Start an instance. My go-to command from WSL2 is <code class="docutils literal notranslate"><span class="pre">jupyter-lab</span> <span class="pre">--no-browser</span></code>.</p></li>
@@ -424,15 +424,15 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>We can now do things like checking out the session history: <code class="docutils literal notranslate"><span class="pre">kc.get_shell_msg(kc.history())</span></code>. This includes all of the kernel history, including things that happened before we joined.</p>
-<p><img alt="history" src="content/img/history1.JPG" /></p>
+<p><img alt="history" src="../_images/history.JPG" /></p>
 <p>And we can execute commands: <code class="docutils literal notranslate"><span class="pre">kc.execute_interactive(code=&quot;print('banana')&quot;)</span></code>. Keep in mind that this will show up in the history.</p>
-<p>And sometimes we don’t want to be logged. So try: <code class="docutils literal notranslate"><span class="pre">kc.execute_interactive(code=&quot;print('grapefruit')&quot;,</span> <span class="pre">silent=True)</span></code>. Boom, not in the history anymore. You know those cell execution counters? This also prevents them from incrementing (our <code class="docutils literal notranslate"><span class="pre">print('banana')</span></code> <em>would</em> increment the counter… which could be noticed by anyone using the notebook.</p>
-<p>Because we’re executing commands in ipython, other fun things work like executing system commands with <code class="docutils literal notranslate"><span class="pre">!</span></code>: <code class="docutils literal notranslate"><span class="pre">kc.execute_interactive(code=&quot;!ls&quot;,</span> <span class="pre">silent=True)</span></code></p>
+<p>And sometimes we don’t want to be logged. So try: <code class="docutils literal notranslate"><span class="pre">kc.execute_interactive(code=&quot;print('grapefruit')&quot;,</span> <span class="pre">silent=True)</span></code>. Boom, not in the history anymore. You know those cell execution counters? This also prevents them from incrementing and therefore helps keep us stealthy (our <code class="docutils literal notranslate"><span class="pre">print('banana')</span></code> <em>would</em> increment the counter).</p>
+<p>Because we’re executing commands in ipython, other fun things work like executing system commands with <code class="docutils literal notranslate"><span class="pre">!</span></code>: <code class="docutils literal notranslate"><span class="pre">kc.execute_interactive(code=&quot;!ls&quot;,</span> <span class="pre">silent=True)</span></code>.</p>
 <p>This execution method can even let us tamper with Jupyter-users during runtime. Check out this well-timed variable modification…</p>
 <p><img alt="runtime" src="../_images/runtime.JPG" /></p>
+<p>between 13 and 14, we ran: <code class="docutils literal notranslate"><span class="pre">kc.execute_interactive(code=&quot;test</span> <span class="pre">=</span> <span class="pre">'jimmy'&quot;,</span> <span class="pre">silent=True)</span></code></p>
 <p>and the execution count and history don’t even give us away.</p>
-<p><code class="docutils literal notranslate"><span class="pre">kc.execute_interactive(code=&quot;test</span> <span class="pre">=</span> <span class="pre">'jimmy'&quot;,</span> <span class="pre">silent=True)</span></code></p>
-<p>It’s also possible that this was entirely too complicated. You can do similar things from <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">console</span> <span class="pre">--existing</span> <span class="pre">your.json</span></code>… but I’m not sure you can be quite as stealthy or have the range of raw functionality. If you choose to do it with <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">console</span></code>, also be aware that killing the console there will also kill it for any cohabitants. Do you have any other cool uses for this technique?</p>
+<p>It’s also possible that this was entirely too complicated. You can do similar things from <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">console</span> <span class="pre">--existing</span> <span class="pre">your.json</span></code>… but I’m not sure you can be quite as stealthy or have the range of raw functionality. If you choose to do it with <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">console</span></code>, also be aware that killing the console there will also kill it for any cohabitants. This also presupposes that you have that key <code class="docutils literal notranslate"><span class="pre">.json</span></code>, and if you have that, you probably have code execution some other way. Is it strictly necessary? Probably not. Was it fun? Certainly. Do you have any other cool uses for this technique?</p>
 <p>[1] <a class="reference external" href="https://stackoverflow.com/a/70263390">https://stackoverflow.com/a/70263390</a></p>
 </section>
 
