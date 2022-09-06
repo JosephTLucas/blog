@@ -36,7 +36,7 @@ and the execution count and history don't even give us away.
 
 `kc.execute_interactive(code="test = 'jimmy'", silent=True)`
 
-It's also possible that this was entirely too complicated. You can do similar things from `jupyter console --existing your.json`... but I'm not sure you can be quite as stealthy or have the range of raw functionality. If you choose to do it with `jupyter console`, also be aware that killing the console there will also kill it for any cohabitants. Do you have any other cool uses for this technique?
+It's also possible that this was entirely too complicated. You can do similar things from `jupyter console --existing your.json`... but I'm not sure you can be quite as stealthy or have the range of raw functionality. If you choose to do it with `jupyter console`, also be aware that killing the console there will also kill it for any cohabitants. This also presupposes that you have that key `.json`, and if you have that, you probably have code execution some other way. Is it strictly necessary? Probably not. Was it fun? Certainly. Do you have any other cool uses for this technique?
 
 
 [1] https://stackoverflow.com/a/70263390
