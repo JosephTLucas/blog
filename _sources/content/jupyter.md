@@ -7,7 +7,7 @@ Instead of focusing on the password and token based authentication most folks ar
 3. Take a look at your various runtimes (sorted by modification time): `ls -tlr ~/.local/share/jupyter/runtime/`. [1]
 4. See the most recent file that starts with `kernel` and ends with `.json`? That has some goodies. Take a look and keep a copy. 
 
-![kernel_json](img/kernel_json.JPG)
+![kerneljson](img/kerneljson.JPG)
 
 With that file, we can create a [KernelClient](https://jupyter-client.readthedocs.io/en/stable/api/client.html).
 
@@ -20,7 +20,7 @@ kc.start_channels()
 
 We can now do things like checking out the session history: `kc.get_shell_msg(kc.history())`. This includes all of the kernel history, including things that happened before we joined.
 
-![history](img/history_1.JPG)
+![history](img/history1.JPG)
 
 And we can execute commands: `kc.execute_interactive(code="print('banana')")`. Keep in mind that this will show up in the history.
 

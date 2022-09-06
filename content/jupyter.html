@@ -415,7 +415,7 @@ title="Print to PDF"
 <li><p>Take a look at your various runtimes (sorted by modification time): <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-tlr</span> <span class="pre">~/.local/share/jupyter/runtime/</span></code>. [1]</p></li>
 <li><p>See the most recent file that starts with <code class="docutils literal notranslate"><span class="pre">kernel</span></code> and ends with <code class="docutils literal notranslate"><span class="pre">.json</span></code>? That has some goodies. Take a look and keep a copy.</p></li>
 </ol>
-<p><img alt="kernel_json" src="content/img/kernel_json.JPG" /></p>
+<p><img alt="kerneljson" src="../_images/kerneljson.JPG" /></p>
 <p>With that file, we can create a <a class="reference external" href="https://jupyter-client.readthedocs.io/en/stable/api/client.html">KernelClient</a>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cf</span> <span class="o">=</span> <span class="n">jupyter_client</span><span class="o">.</span><span class="n">find_connection_file</span><span class="p">(</span><span class="s2">&quot;your.json&quot;</span><span class="p">)</span>
 <span class="n">kc</span> <span class="o">=</span> <span class="n">jupyter_client</span><span class="o">.</span><span class="n">BlockingKernelClient</span><span class="p">(</span><span class="n">connection_file</span> <span class="o">=</span> <span class="n">cf</span><span class="p">)</span>
@@ -424,7 +424,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>We can now do things like checking out the session history: <code class="docutils literal notranslate"><span class="pre">kc.get_shell_msg(kc.history())</span></code>. This includes all of the kernel history, including things that happened before we joined.</p>
-<p><img alt="history" src="content/img/history_1.JPG" /></p>
+<p><img alt="history" src="content/img/history1.JPG" /></p>
 <p>And we can execute commands: <code class="docutils literal notranslate"><span class="pre">kc.execute_interactive(code=&quot;print('banana')&quot;)</span></code>. Keep in mind that this will show up in the history.</p>
 <p>And sometimes we don’t want to be logged. So try: <code class="docutils literal notranslate"><span class="pre">kc.execute_interactive(code=&quot;print('grapefruit')&quot;,</span> <span class="pre">silent=True)</span></code>. Boom, not in the history anymore. You know those cell execution counters? This also prevents them from incrementing (our <code class="docutils literal notranslate"><span class="pre">print('banana')</span></code> <em>would</em> increment the counter… which could be noticed by anyone using the notebook.</p>
 <p>Because we’re executing commands in ipython, other fun things work like executing system commands with <code class="docutils literal notranslate"><span class="pre">!</span></code>: <code class="docutils literal notranslate"><span class="pre">kc.execute_interactive(code=&quot;!ls&quot;,</span> <span class="pre">silent=True)</span></code></p>
