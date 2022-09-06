@@ -1,4 +1,4 @@
-# What is a jupyter session anyway?
+# Cohabitating on a Jupyter session
 
 Instead of focusing on the password and token based authentication most folks are used to seeing as part of their JupyterLab interface, we're going to take a deeper look at the internals. Come play along!
 
