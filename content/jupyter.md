@@ -24,17 +24,17 @@ We can now do things like checking out the session history: `kc.get_shell_msg(kc
 
 And we can execute commands: `kc.execute_interactive(code="print('banana')")`. Keep in mind that this will show up in the history.
 
-And sometimes we don't want to be logged. So try: `kc.execute_interactive(code="print('grapefruit')", silent=True)`. Boom, not in the history anymore. You know those cell execution counters? This also prevents them from incrementing (our `print('banana')` _would_ increment the counter... which could be noticed by anyone using the notebook.
+And sometimes we don't want to be logged. So try: `kc.execute_interactive(code="print('grapefruit')", silent=True)`. Boom, not in the history anymore. You know those cell execution counters? This also prevents them from incrementing and therefore helps keep us stealthy (our `print('banana')` _would_ increment the counter).
 
-Because we're executing commands in ipython, other fun things work like executing system commands with `!`: `kc.execute_interactive(code="!ls", silent=True)`
+Because we're executing commands in ipython, other fun things work like executing system commands with `!`: `kc.execute_interactive(code="!ls", silent=True)`.
 
 This execution method can even let us tamper with Jupyter-users during runtime. Check out this well-timed variable modification...
 
 ![runtime](img/runtime.JPG)
 
-and the execution count and history don't even give us away.
+between 13 and 14, we ran: `kc.execute_interactive(code="test = 'jimmy'", silent=True)`
 
-`kc.execute_interactive(code="test = 'jimmy'", silent=True)`
+and the execution count and history don't even give us away.
 
 It's also possible that this was entirely too complicated. You can do similar things from `jupyter console --existing your.json`... but I'm not sure you can be quite as stealthy or have the range of raw functionality. If you choose to do it with `jupyter console`, also be aware that killing the console there will also kill it for any cohabitants. This also presupposes that you have that key `.json`, and if you have that, you probably have code execution some other way. Is it strictly necessary? Probably not. Was it fun? Certainly. Do you have any other cool uses for this technique?
 
