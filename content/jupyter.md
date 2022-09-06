@@ -20,7 +20,7 @@ kc.start_channels()
 
 We can now do things like checking out the session history: `kc.get_shell_msg(kc.history())`. This includes all of the kernel history, including things that happened before we joined.
 
-![history](img/history1.JPG)
+![history](img/history.JPG)
 
 And we can execute commands: `kc.execute_interactive(code="print('banana')")`. Keep in mind that this will show up in the history.
 
