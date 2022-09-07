@@ -10,11 +10,13 @@ Documenting bits of knowledge accumulated through my intellectual wanderings.
 
 [HackThisAI](https://hackthis.ai)
 
+[DEFCON 30 AI Village CTF](https://www.kaggle.com/competitions/ai-village-ctf)
 
 - West Point Math
 - Georgia Tech Comp Sci
 - Former US Army Cyber
-- Currently AWS
+- Former AWS
+- Currently Nvidia
 
 ## Cool things I've found online
 
@@ -43,3 +45,5 @@ Documenting bits of knowledge accumulated through my intellectual wanderings.
 [Pandas Tutor](https://pandastutor.com/vis.html): Great way to teach/understand the logic of [pandas dataframe](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html) operations.
 
 [Pythex](https://pythex.org/): Python regex helper
+
+[FLAWS2](http://flaws2.cloud): AWS security challenges
