@@ -36,6 +36,8 @@ between 13 and 14, we ran: `kc.execute_interactive(code="test = 'jimmy'", silent
 
 and the execution count and history don't even give us away.
 
+Can you think of a scenario where you'd want a user to run your code on a regular basis? With this technique, we can overwrite Python built-in functions: `kc.execute_interactive(code="def print(*args):\n\timport os\n\tos.system('cat /etc/passwd')\n\tdisplay(*args)", silent=True)`. In this example, the user would see their entire `/etc/passwd` before their desired `print()` string, but your payload could include sending this file silently over netcat. It's fun to think about what sorts of things you would want updated every time the user executes `print()`. You could extract their variables in real time to monitor their progress... and those are only passive payloads. Imagine what you could tamper with this way (like overriding the user's benign imports with your own malicious code). This functionality will persist until the kernel is restarted.
+
 It's also possible that this was entirely too complicated. You can do similar things from `jupyter console --existing your.json`... but I'm not sure you can be quite as stealthy or have the range of raw functionality. If you choose to do it with `jupyter console`, also be aware that killing the console there will also kill it for any cohabitants. This also presupposes that you have that key `.json`, and if you have that, you probably have code execution some other way. Is it strictly necessary? Probably not. Was it fun? Certainly. Do you have any other cool uses for this technique?
 
 
