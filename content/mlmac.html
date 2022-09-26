@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>HackThisAI: easy_credit_check &#8212; Blog</title>
+    <title>An Unsuccessful Approach to LLM Attribution &#8212; Blog</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="HackThisAI: medium_flying_pig" href="medium_flying_pig.html" />
-    <link rel="prev" title="HackThisAI" href="HackThisAI.html" />
+    <link rel="next" title="Interview with Xinof" href="interview_with_xinof.html" />
+    <link rel="prev" title="Notes for Adversarial Machine Learning Reading List" href="aml_reading_notes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -124,8 +124,8 @@ const thebe_selector_output = ".output, .cell_output"
    HackThisAI
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="easy_credit_check.html">
    HackThisAI: easy_credit_check
   </a>
  </li>
@@ -149,8 +149,8 @@ const thebe_selector_output = ".output, .cell_output"
    Notes for Adversarial Machine Learning Reading List
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="mlmac.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    An Unsuccessful Approach to LLM Attribution
   </a>
  </li>
@@ -322,7 +322,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/JosephTLucas/blog/issues/new?title=Issue%20on%20page%20%2Fcontent/easy_credit_check.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/JosephTLucas/blog/issues/new?title=Issue%20on%20page%20%2Fcontent/mlmac.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -350,7 +350,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/content/easy_credit_check.md"
+        <a href="../_sources/content/mlmac.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -399,7 +399,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>HackThisAI: easy_credit_check</h1>
+                <h1>An Unsuccessful Approach to LLM Attribution</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -411,10 +411,13 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="hackthisai-easy-credit-check">
-<h1>HackThisAI: easy_credit_check<a class="headerlink" href="#hackthisai-easy-credit-check" title="Permalink to this headline">#</a></h1>
-<p>A walkthrough of the easy <a class="reference external" href="https://github.com/JosephTLucas/HackThisAI">HackThisAI</a> challenge: easy_credit_check is available in <a class="reference external" href="https://github.com/JosephTLucas/HackThisAI/blob/main/example.ipynb">this notebook</a>.</p>
-<p>Even if you choose to not execute the challenge as a notebook, the cell output displayed in GitHub should give you some ideas about how to complete the challenge.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="an-unsuccessful-approach-to-llm-attribution">
+<h1>An Unsuccessful Approach to LLM Attribution<a class="headerlink" href="#an-unsuccessful-approach-to-llm-attribution" title="Permalink to this headline">#</a></h1>
+<p>Once the DEFCON 30 AI Village CTF concluded, I was happy to take the remaining week to poke at the <a class="reference external" href="https://mlmac.io/">Machine Learning Model Attribution Challenge</a>. The challenge had tickled my curiousity since its announcement, but I just did not have the bandwidth while running the CTF. The tl;dr of the competition is that we’re presented with APIs for 12 large language models (LLMs) that have been finetuned from 12 base models. Based on our queries, we must identify the base model “parent” of each finetuned model. I finished an abysmal 10/14, having only  correctly attributed 3 out of 12 models. Let’s explore my two (failed) research angles.</p>
+<p>I thought that finetuning should only modify model outputs in regions of space similar to the finetuning data points and suspected these data points to be in the standard natural language space. My hypothesis was that given a sufficiently bizarre string (unlikely to be near the training data), the value returned from a finetuned model should be similar to its parent. Here was my bizarre string generator: <code class="docutils literal notranslate"><span class="pre">word</span> <span class="pre">=</span> <span class="pre">''.join(random.choices(string.printable</span> <span class="pre">+</span> <span class="pre">string.whitespace,</span> <span class="pre">k=random.randint(16,64)))</span></code></p>
+<p>My first approach was to try and identify the best such “bizarre string.” The tie-breaker for the competition was the number of queries to the finetuned models, but base model queries were free (until you hit the huggingface API limit – whoops). To minimize finetuned model queries, I first tried to search for an optimum bizarre string in the base model space. This string would be one that maximized the differences in the values returned by the 12 base models. I used <a class="reference external" href="https://www.nltk.org/api/nltk.metrics.distance.html#nltk.metrics.distance.jaro_similarity">jaro similarity</a> as this distance metric. In a loop, I would generate a random string, submit it to each of the 12 base models, and return the maximum and median pairwise similarities. My best candidate string would have the lowest value. For instance, one string that scored well was <code class="docutils literal notranslate"><span class="pre">/`0?F#[EKS9rLW\&quot;;Yms</span></code>. If my theory held, I should be able to take this string to the finetuned models and each of their outputs should be relatively similar to one of the 12 base models. For instance, the output from gpt2 (<code class="docutils literal notranslate"><span class="pre">/`0?F#[EKS9rLW&quot;;Yms9XjGQV;Qy-Z-A9S2U5UJX4=XM&amp;P&#64;C5V0=_</span></code>) should be very similar to the output from one of the finetuned models. Alas, this did not hold. There was one exact match, but the remaining the remaining outputs were sufficiently different to make matching difficult or impossible.</p>
+<p>My second approach was to extend the same line of thinking, but increase the number of queries and move the attack online. I used my random string generator to generate bizarre strings and send them through all 24 models (12 base and 12 finetuned). For each iteration, I used jaro similarity again to save the most likely pairings. After ~50 such strings, I took the highest scoring pairs and submitted them as my solution to mlmac. I anxiously awaited the competition conclusion when I could see the results… but alas, only 3/12!</p>
+<p>You can’t win them all. I learned some stuff about large language models, made a donation to the huggingface API fund, and had fun. The winning solution correctly attributed 7/12 and I was happy to see plenty of submissions by students. I’m looking forward to reading their approaches.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -444,17 +447,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="HackThisAI.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="aml_reading_notes.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">HackThisAI</p>
+            <p class="prev-next-title">Notes for Adversarial Machine Learning Reading List</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="medium_flying_pig.html" title="next page">
+    <a class='right-next' id="next-link" href="interview_with_xinof.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">HackThisAI: medium_flying_pig</p>
+        <p class="prev-next-title">Interview with Xinof</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
