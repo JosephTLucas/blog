@@ -12,6 +12,7 @@ parts:
     - file: content/objects_through_space
     - file: content/aml_references
     - file: content/aml_reading_notes
+    - file: content/mlmac
   - caption: External Writing
     chapters:
     - file: content/interview_with_xinof
