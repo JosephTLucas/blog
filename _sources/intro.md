@@ -4,6 +4,8 @@ Documenting bits of knowledge accumulated through my intellectual wanderings.
 
 ## About Me
 
+[Mastadon: @josephtlucas@fosstodon.org](https://fosstodon.org/@josephtlucas)
+
 [Twitter](https://twitter.com/josephtlucas)
 
 [LinkedIn](https://www.linkedin.com/in/josephtlucas/)
