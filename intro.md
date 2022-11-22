@@ -51,3 +51,5 @@ Documenting bits of knowledge accumulated through my intellectual wanderings.
 [FLAWS2](http://flaws2.cloud): AWS security challenges
 
 [ttl.sh](https://ttl.sh/): Open Source, free, no signup, ephemeral docker registry.
+
+[shellchecker](https://www.shellcheck.net/): Verbose error messages and recommendations for shell scripts/commands.
