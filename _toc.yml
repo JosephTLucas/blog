@@ -18,6 +18,7 @@ parts:
     - file: content/interview_with_xinof
     - file: content/stumpy_tutorial
     - file: content/matplotblog
+    - file: content/nvidia
   - caption: Data Science
     chapters:
     - file: content/jupyter

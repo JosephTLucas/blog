@@ -18,7 +18,7 @@ Documenting bits of knowledge accumulated through my intellectual wanderings.
 - Georgia Tech Comp Sci
 - Former US Army Cyber
 - Former AWS
-- Currently Nvidia
+- Currently NVIDIA
 
 ## Cool things I've found online
 
