@@ -60,3 +60,5 @@ amount of higher math." I found it referenced as "The Feynman Lectures for math"
 [Vulnerabilities 1001: C-Family Software Implementation Vulnerabilities](https://p.ost2.fyi/courses/course-v1:OpenSecurityTraining2+Vulns1001_C-derived+2022_v1/about): Vulnearbility exploitation bootcamp
 
 [NaNoGenMo](https://nanogenmo.github.io/): Write code that generates a 50k word novel. Since 2013!
+
+[A Critical Field Guide for Working with Machine Learning Datasets](https://knowingmachines.org/critical-field-guide): Great primer for building, selecting, and analyzing datasets.
