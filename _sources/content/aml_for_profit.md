@@ -13,6 +13,7 @@ Search engine optimization can be viewed as a specific case of targeted evasion 
 As of this writing, LLMs have been trained on "the naive internet" -- a massive pool of data mainly populated by actors unaware that they were contributing to a training dataset. Savvy actors are no longer ignorant. Whether intentionally through assistant-style interfaces or unintentionally through LLMs used in the backend of traditional search applications, consumers will be querying LLMs to help make purchasing decisions. Here are excerpts from two different sessions with ChatGPT:
 
 ![washer1](img/washer1.png)
+
 ![washer2](img/washer2.png)
 
 Great, very helpful... but not the same, and not first-order controlled by the companies named. It's entirely possible that a marketing executive at Bosch would be very disappointed that they're only cited as having "a variety of wash cycles" instead of something more colorful and descriptive -- not to mention that this great feature is omitted in the other chat. And the Samsung and LG execs? Not happy. The GE exec? Pack a bag. Based on the amount of capital currently spent on advertising, I'm sure that marketing teams will want to pursue "LLM Engine Optimization". How can a third party do that when they don't control the AI product or service? Adversarial Machine Learning techniques.
