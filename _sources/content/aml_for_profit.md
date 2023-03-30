@@ -33,4 +33,6 @@ It's a feature, not a bug -- plugin, not prompt injection. These days are near (
 
 ## Conclusion
 
-Everyone is out to make a buck and advertising is (probably) an important function of business and society -- make things discoverable, delight customers and so forth. As societies move from flyers in the town square to facebook ads to... whatever's next, the techniques used to influence material presented to users and consumers adapt with them.  How do I jump this decision boundary? How do I change the decision boundary? Great researchers have been working on these questions for years under the umbrella of "security", but they may just have been optimizing the next wave of advertising all along.
+Everyone is out to make a buck and advertising is (probably) an important function of business and society -- make things discoverable, delight customers and so forth. As societies move from flyers in the town square to facebook ads to... whatever's next, the techniques used to influence material presented to users and consumers adapt with them.  The meta-problem for advertising is targeted evasion: How do I move someone from the class `not going to buy my product` to the class `bought my product`? How do I jump this decision boundary? How do I change the decision boundary? Great researchers have been working on these questions for years under the umbrella of "security", but they may just have been optimizing the next wave of advertising all along.
+
+See also: "Influence Operations"
