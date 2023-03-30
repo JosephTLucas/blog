@@ -15,7 +15,7 @@ As of this writing, LLMs have been trained on "the naive internet" -- a massive 
 ![washer1](img/washer1.png)
 ![washer2](img/washer2.png)
 
-Great, very helpful... but not the same, and not first-order controlled by the companies named. It's entirely possible that a marketing executive at Bosch would be very disappointed that they're only cited as having "a variety of wash cycles" instead of something more colorful and descriptive -- not to mention that this great feature is omitted in the other chat. And the Samsung and LG execs? Not happy. The GE exec? Pack a bag. Based on the amount of capital currently spent on advertising, I'm sure that marketing teams will want to do "LLM Engine Optimization". How can a third party do that when they don't control the AI product or service? Adversarial Machine Learning techniques.
+Great, very helpful... but not the same, and not first-order controlled by the companies named. It's entirely possible that a marketing executive at Bosch would be very disappointed that they're only cited as having "a variety of wash cycles" instead of something more colorful and descriptive -- not to mention that this great feature is omitted in the other chat. And the Samsung and LG execs? Not happy. The GE exec? Pack a bag. Based on the amount of capital currently spent on advertising, I'm sure that marketing teams will want to pursue "LLM Engine Optimization". How can a third party do that when they don't control the AI product or service? Adversarial Machine Learning techniques.
 
 ## And Others
 
