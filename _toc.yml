@@ -11,7 +11,6 @@ parts:
     - file: content/medium_flying_pig
     - file: content/objects_through_space
     - file: content/aml_references
-    - file: content/aml_reading_notes
     - file: content/mlmac
   - caption: External Writing
     chapters:
