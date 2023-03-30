@@ -1,4 +1,4 @@
-# Adversarial Machine Learning for -fun and- Profit
+# Adversarial Machine Learning for ~~fun and~~ Profit
 
 ## Introduction
 
