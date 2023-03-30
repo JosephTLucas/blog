@@ -26,3 +26,4 @@ torchmetrics==0.6.1
 torchvision==0.11.2
 urllib3==1.26.7
 requests
+pydata-sphinx-theme==0.13.1
