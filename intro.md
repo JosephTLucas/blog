@@ -1,6 +1,11 @@
-# Blog
+# Talks
 
-Documenting bits of knowledge accumulated through my intellectual wanderings.
+- Troopers 2023: Jupysec: Auditing Jupyter to Improve AI Security
+- [JupyterCon 2023: Post-exploitation in Jupyter Environments](https://youtu.be/EujDolCutI8)
+- [PyConUS 2022: Serialization, more than pickling](https://youtu.be/ygrjAGDU1J8)
+- HushCon 2022: Opportunistic Recon for AI Systems
+- [NormConf 2022: IPython Profiles](https://youtu.be/woP_UcJZZoA)
+- [PyData Global 2022: What Hackers can do to your Jupyter Instance](https://youtu.be/8vwo6gDANiY)
 
 ## About Me
 
