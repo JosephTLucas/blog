@@ -1,6 +1,6 @@
 # Talks
 
-- Troopers 2023: Jupysec: Auditing Jupyter to Improve AI Security
+- [Troopers 2023: Jupysec: Auditing Jupyter to Improve AI Security](https://youtu.be/7HpuPmNLYjk)
 - [JupyterCon 2023: Post-exploitation in Jupyter Environments](https://youtu.be/EujDolCutI8)
 - [PyConUS 2022: Serialization, more than pickling](https://youtu.be/ygrjAGDU1J8)
 - HushCon 2022: Opportunistic Recon for AI Systems
