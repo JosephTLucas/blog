@@ -5,6 +5,8 @@ title: Blog
 author: Joseph T. Lucas
 logo: images/terminal_name.svg
 
+toc_collapse: true
+
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
