@@ -1,4 +1,6 @@
-# Talks
+# Joe Lucas
+
+## Talks
 
 - [SPIE Defense + Commercial Sensing, Security and Assurance for AI-enabled Systems 2024: AI Red Teaming (Invited Keynote)](https://github.com/JosephTLucas/talks/blob/master/SPIE-DefenseCommercialSensing-AssuranceSecurityForAIEnabledSystems.pdf)
 - [Troopers 2023: Jupysec: Auditing Jupyter to Improve AI Security](https://youtu.be/7HpuPmNLYjk)
@@ -60,3 +62,5 @@ amount of higher math." I found it referenced as "The Feynman Lectures for math"
 [NaNoGenMo](https://nanogenmo.github.io/): Write code that generates a 50k word novel. Since 2013!
 
 [A Critical Field Guide for Working with Machine Learning Datasets](https://knowingmachines.org/critical-field-guide): Great primer for building, selecting, and analyzing datasets.
+
+[Meta Kaggle for Code](https://www.kaggle.com/discussions/product-feedback/430422): A dataset of public Kaggle notebooks. Goldmine!
