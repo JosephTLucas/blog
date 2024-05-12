@@ -177,16 +177,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="jupyter.html">Cohabitating on a Jupyter session</a></li>
 <li class="toctree-l1"><a class="reference internal" href="first_pycon.html">My First PyCon</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sklearn_sprint.html">Scikit-Learn Sprint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="git_scraping.html">Git Scraping</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Recommended Reading</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="nonfiction.html">Nonfiction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fiction.html">Fiction</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hobbies</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="photos.html">Photography</a></li>
 </ul>
 
     </div>
@@ -450,7 +440,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1948</span><span class="o">/</span><span class="mf">2159759763.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1992</span><span class="o">/</span><span class="mf">2159759763.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> 
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;setup/thing.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
 <span class="ne">----&gt; </span><span class="mi">4</span>     <span class="n">sd</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
@@ -500,7 +490,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Huh, still doesn’t work. It looks like the <code class="docutils literal notranslate"><span class="pre">pickled</span></code> object still references the old namespace. Severak if the solutions presented in the Stack Overflow link discuss writing a customer unpickler. However, this technique still acts as a redirection for import paths. That won’t work for the CTF because we don’t know what namespaces existed in the players context. Furthermore, we might not even have access to their various imports. We need something totally independent.</p>
+<p>Huh, still doesn’t work. It looks like the <code class="docutils literal notranslate"><span class="pre">pickled</span></code> object still references the old namespace. Several of the solutions presented in the Stack Overflow link discuss writing a customer unpickler. However, this technique still acts as a redirection for import paths. That won’t work for the CTF because we don’t know what namespaces existed in the players context. Furthermore, we might not even have access to their various imports. We need something totally independent.</p>
 </section>
 <section id="joblib">
 <h2>Joblib<a class="headerlink" href="#joblib" title="Permalink to this headline">#</a></h2>

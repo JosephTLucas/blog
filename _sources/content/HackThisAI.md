@@ -1,5 +1,7 @@
 # [HackThisAI](https://github.com/JosephTLucas/HackThisAI)
 
+**May 2024: The AI security CTF challenge has evolved. HackThisAI is no longer under development. Go to [Dreadnode's Crucible](https://crucible.dreadnode.io/) instead.**
+
 I have been writing capture-the-flag challenges specifically for Adversarial Machine Learning (AML). AML includes attempts to evade, poison, or steal/learn about machine learning models. It covers a range of activities and is a young, growing field of study.
 
 Years ago, I took an adversarial machine learning workshop. It was really interesting, but there weren't many ways to continue practicing aftewards. I like the progressive system of CTFs for teaching technical skills and decided to try and adopt AML problems to that format.

@@ -177,16 +177,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="jupyter.html">Cohabitating on a Jupyter session</a></li>
 <li class="toctree-l1"><a class="reference internal" href="first_pycon.html">My First PyCon</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sklearn_sprint.html">Scikit-Learn Sprint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="git_scraping.html">Git Scraping</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Recommended Reading</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="nonfiction.html">Nonfiction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fiction.html">Fiction</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hobbies</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="photos.html">Photography</a></li>
 </ul>
 
     </div>
@@ -357,7 +347,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -373,6 +365,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#events">Events</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools">Tools</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other">Other</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -384,22 +386,36 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="adversarial-machine-learning-references">
 <h1>Adversarial Machine Learning References<a class="headerlink" href="#adversarial-machine-learning-references" title="Permalink to this headline">#</a></h1>
+<section id="events">
+<h2>Events<a class="headerlink" href="#events" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.camlis.org">Conference on Applied Machine Learning for Information Security (CAMLIS)</a></p></li>
-<li><p><a class="reference external" href="https://adversarial-ml-tutorial.org/introduction/">Adversarial Robustness - Theory and Practice</a></p></li>
-<li><p><a class="reference external" href="https://github.com/Azure/counterfit">Azure Counterfit</a></p></li>
-<li><p><a class="reference external" href="https://nicholas.carlini.com/writing/2018/adversarial-machine-learning-reading-list.html">Adversarial Machine Learning Reading List</a></p></li>
+</ul>
+</section>
+<section id="tools">
+<h2>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/Trusted-AI/adversarial-robustness-toolbox">Adversarial Robustness Toolbox</a></p></li>
 <li><p><a class="reference external" href="https://github.com/trailofbits/PrivacyRaven">Privacy Raven</a></p></li>
+<li><p><a class="reference external" href="https://github.com/leondz/garak">Garak</a></p></li>
+<li><p><a class="reference external" href="https://github.com/jxmorris12/vec2text">vec2text</a></p></li>
+<li><p><a class="reference external" href="https://github.com/trailofbits/fickling">fickling</a></p></li>
+<li><p><a class="reference external" href="https://github.com/QData/TextAttack">TextAttack</a></p></li>
+</ul>
+</section>
+<section id="other">
+<h2>Other<a class="headerlink" href="#other" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://adversarial-ml-tutorial.org/introduction/">Adversarial Robustness - Theory and Practice</a></p></li>
+<li><p><a class="reference external" href="https://nicholas.carlini.com/writing/2018/adversarial-machine-learning-reading-list.html">Adversarial Machine Learning Reading List</a></p></li>
 <li><p><a class="reference external" href="http://www.trustworthymachinelearning.com/">Trustworthy Machine Learning</a></p></li>
 <li><p><a class="reference external" href="https://github.com/stratosphereips/awesome-ml-privacy-attacks">Awesome Attacks on Machine Learning Privacy</a></p></li>
 <li><p><a class="reference external" href="https://github.com/Kayzaks/HackingNeuralNetworks">Hacking Neural Networks: A Short Introduction</a></p></li>
 <li><p><a class="reference external" href="https://www.ccs.neu.edu/home/alina/classes/Fall2021/">CY 7790: Special Topics in Security and Privacy: Machine Learning Security and Privacy</a></p></li>
 <li><p><a class="reference external" href="https://www.papernot.fr/teaching/f19-trustworthy-ml">ECE1784H: Trustworthy Machine Learning</a></p></li>
 <li><p><a class="reference external" href="https://people.csail.mit.edu/madry/6.883-Spring18/">6.883 Science of Deep Learning: Bridging Theory and Practice</a></p></li>
-<li><p><a class="reference external" href="https://www.nccoe.nist.gov/ai/adversarial-machine-learning">National Cybersecurity Center of Excellence: Artificial Intelligence: Adversarial Machine Learning</a></p></li>
-<li><p><a class="reference external" href="https://arxiv.org/abs/2111.04204">Natural Adversarial Objects</a></p></li>
-<li><p><a class="reference external" href="https://arxiv.org/pdf/1611.01236.pdf">Adversarial Machine Learning at Scale</a></p></li>
 </ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -454,6 +470,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#events">Events</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools">Tools</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other">Other</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
