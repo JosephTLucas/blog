@@ -13,6 +13,7 @@ parts:
     - file: content/aml_references
     - file: content/mlmac
     - file: content/aml_for_profit
+    - file: content/interviews
   - caption: External Writing
     chapters:
     - file: content/interview_with_xinof
