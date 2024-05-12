@@ -1,7 +1,9 @@
 # Adversarial Machine Learning References
 
-## Events
+## Events/Communities
 - [Conference on Applied Machine Learning for Information Security (CAMLIS)](https://www.camlis.org)
+- [AI Village](https://aivillage.org/)
+- [MITRE ATLAS](https://atlas.mitre.org/resources/contact)
 
 ## Tools
 - [Adversarial Robustness Toolbox](https://github.com/Trusted-AI/adversarial-robustness-toolbox)
