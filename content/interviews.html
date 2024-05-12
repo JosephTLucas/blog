@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Cohabitating on a Jupyter session &#8212; Blog</title>
+    <title>AI Security Interviews &#8212; Blog</title>
   
   
   
@@ -60,11 +60,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/jupyter';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/interviews';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="My First PyCon" href="first_pycon.html" />
-    <link rel="prev" title="NVIDIA Blog Entries" href="nvidia.html" />
+    <link rel="next" title="Interview with Xinof" href="interview_with_xinof.html" />
+    <link rel="prev" title="Adversarial Machine Learning for ~~fun and~~ Profit" href="aml_for_profit.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -156,7 +156,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Adversarial Machine Learning</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="HackThisAI.html">HackThisAI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="easy_credit_check.html">HackThisAI: easy_credit_check</a></li>
 <li class="toctree-l1"><a class="reference internal" href="medium_flying_pig.html">HackThisAI: medium_flying_pig</a></li>
@@ -164,7 +164,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="aml_references.html">Adversarial Machine Learning References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mlmac.html">An Unsuccessful Approach to LLM Attribution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aml_for_profit.html">Adversarial Machine Learning for ~~fun and~~ Profit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interviews.html">AI Security Interviews</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">AI Security Interviews</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">External Writing</span></p>
 <ul class="nav bd-sidenav">
@@ -174,8 +174,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="nvidia.html">NVIDIA Blog Entries</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Cohabitating on a Jupyter session</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="jupyter.html">Cohabitating on a Jupyter session</a></li>
 <li class="toctree-l1"><a class="reference internal" href="first_pycon.html">My First PyCon</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sklearn_sprint.html">Scikit-Learn Sprint</a></li>
 </ul>
@@ -249,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/JosephTLucas/blog/issues/new?title=Issue%20on%20page%20%2Fcontent/jupyter.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/JosephTLucas/blog/issues/new?title=Issue%20on%20page%20%2Fcontent/interviews.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -279,7 +279,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/content/jupyter.md" target="_blank"
+      <li><a href="../_sources/content/interviews.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -348,7 +348,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -359,11 +361,20 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Cohabitating on a Jupyter session</h1>
+    <h1>AI Security Interviews</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-candidates">For Candidates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-interviewers">For Interviewers</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -373,35 +384,28 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="cohabitating-on-a-jupyter-session">
-<h1>Cohabitating on a Jupyter session<a class="headerlink" href="#cohabitating-on-a-jupyter-session" title="Permalink to this headline">#</a></h1>
-<p>Instead of focusing on the password and token based authentication most folks are used to seeing as part of their JupyterLab interface, we’re going to take a deeper look at the internals. Come play along!</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="ai-security-interviews">
+<h1>AI Security Interviews<a class="headerlink" href="#ai-security-interviews" title="Permalink to this headline">#</a></h1>
+<p>Many organizations are building internal AI security capabilities to evaluate internally-developed and integrated AI products and services. Here are my tips for candidates and interviewers navigating this specialty.</p>
+<section id="for-candidates">
+<h2>For Candidates<a class="headerlink" href="#for-candidates" title="Permalink to this headline">#</a></h2>
 <ol class="arabic simple">
-<li><p>Start an instance. My go-to command from WSL2 is <code class="docutils literal notranslate"><span class="pre">jupyter-lab</span> <span class="pre">--no-browser</span></code>.</p></li>
-<li><p>See <code class="docutils literal notranslate"><span class="pre">http://localhost:8888/lab?token={SOMESTUFF}</span></code>? Yup, that’ll help you connect to the session in the browser, but we’re going to take a different route.</p></li>
-<li><p>Take a look at your various runtimes (sorted by modification time): <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-tlr</span> <span class="pre">~/.local/share/jupyter/runtime/</span></code>. [1]</p></li>
-<li><p>See the most recent file that starts with <code class="docutils literal notranslate"><span class="pre">kernel</span></code> and ends with <code class="docutils literal notranslate"><span class="pre">.json</span></code>? That has some goodies. Take a look and keep a copy.</p></li>
+<li><p><strong>Prompt engineering may have been the gateway, don’t let it be the terminal node.</strong> LLMs and their interesting security characteristics brought many new people into the field of AI security; that’s great. While you’re progressing in your bot-bullying skillset, take the opportunity to realize that the field had a maturing set of taxonomies, frameworks, and tools before the rise of LLMs. You’ll go faster and dive deeper if you start to dig into these and a familiarity with more conventional methods may help cover any blindspots you have going into interviews.</p></li>
+<li><p><strong>Build and deploy AI applications.</strong> They don’t need to be good, but try and find different machine learning tasks and modalities and enforce different deployment requiements. Deploy a RAG chat app. Add streaming support. Deploy an image classifier. Add support for different formats and dimensions. Performance can be subpar, but at least think about why and how you might improve it. These exercises give important context for understanding the multitude of potential ML products and services you’ll evaluate in your role. <strong>BONUS: Now that you know how to build an application, build an intentionally vulnerable application to sharpen your understanding of security boundaries and vulnerabilities.</strong> If you’re looking for a more defensive role, you can build defensive controls and detections into your application.</p></li>
+<li><p><strong>Hack stuff.</strong> This advice admittedly comes from the more offensive side of the house, but there’s a growing number of ways to learn and gain experience even if you don’t already work in an AI security role, e.g. <a class="reference external" href="https://crucible.dreadnode.io/">CTFs</a> or <a class="reference external" href="https://huntr.com/">bug bounties</a>. And if you have a security background but not much demonstratable ML background, go compete in some <a class="reference external" href="https://www.kaggle.com/competitions">Kaggle competitions</a>. Not only do each of these experiences teach you something, they give you anecdotes that will be useful for “tell me about a time when…” interview questions.</p></li>
 </ol>
-<p><img alt="kerneljson" src="../_images/kerneljson.JPG" /></p>
-<p>With that file, we can create a <a class="reference external" href="https://jupyter-client.readthedocs.io/en/stable/api/client.html">KernelClient</a>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cf</span> <span class="o">=</span> <span class="n">jupyter_client</span><span class="o">.</span><span class="n">find_connection_file</span><span class="p">(</span><span class="s2">&quot;your.json&quot;</span><span class="p">)</span>
-<span class="n">kc</span> <span class="o">=</span> <span class="n">jupyter_client</span><span class="o">.</span><span class="n">BlockingKernelClient</span><span class="p">(</span><span class="n">connection_file</span> <span class="o">=</span> <span class="n">cf</span><span class="p">)</span>
-<span class="n">kc</span><span class="o">.</span><span class="n">load_connection_file</span><span class="p">()</span>
-<span class="n">kc</span><span class="o">.</span><span class="n">start_channels</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>We can now do things like checking out the session history: <code class="docutils literal notranslate"><span class="pre">kc.get_shell_msg(kc.history())</span></code>. This includes all of the kernel history, including things that happened before we joined.</p>
-<p><img alt="history" src="../_images/history.JPG" /></p>
-<p>And we can execute commands: <code class="docutils literal notranslate"><span class="pre">kc.execute_interactive(code=&quot;print('banana')&quot;)</span></code>. Keep in mind that this will show up in the history.</p>
-<p>And sometimes we don’t want to be logged. So try: <code class="docutils literal notranslate"><span class="pre">kc.execute_interactive(code=&quot;print('grapefruit')&quot;,</span> <span class="pre">silent=True)</span></code>. Boom, not in the history anymore. You know those cell execution counters? This also prevents them from incrementing and therefore helps keep us stealthy (our <code class="docutils literal notranslate"><span class="pre">print('banana')</span></code> <em>would</em> increment the counter).</p>
-<p>Because we’re executing commands in ipython, other fun things work like executing system commands with <code class="docutils literal notranslate"><span class="pre">!</span></code>: <code class="docutils literal notranslate"><span class="pre">kc.execute_interactive(code=&quot;!ls&quot;,</span> <span class="pre">silent=True)</span></code>.</p>
-<p>This execution method can even let us tamper with Jupyter-users during runtime. Check out this well-timed variable modification…</p>
-<p><img alt="runtime" src="../_images/runtime.JPG" /></p>
-<p>between 13 and 14, we ran: <code class="docutils literal notranslate"><span class="pre">kc.execute_interactive(code=&quot;test</span> <span class="pre">=</span> <span class="pre">'jimmy'&quot;,</span> <span class="pre">silent=True)</span></code></p>
-<p>and the execution count and history don’t even give us away.</p>
-<p>Can you think of a scenario where you’d want a user to run your code on a regular basis? With this technique, we can overwrite Python built-in functions: <code class="docutils literal notranslate"><span class="pre">kc.execute_interactive(code=&quot;def</span> <span class="pre">print(*args):\n\timport</span> <span class="pre">os\n\tos.system('cat</span> <span class="pre">/etc/passwd')\n\tdisplay(*args)&quot;,</span> <span class="pre">silent=True)</span></code>. In this example, the user would see their entire <code class="docutils literal notranslate"><span class="pre">/etc/passwd</span></code> before their desired <code class="docutils literal notranslate"><span class="pre">print()</span></code> string, but your payload could include sending this file silently over netcat. It’s fun to think about what sorts of things you would want updated every time the user executes <code class="docutils literal notranslate"><span class="pre">print()</span></code>. You could extract their variables in real time to monitor their progress… and those are only passive payloads. Imagine what you could tamper with this way (like overriding the user’s benign imports with your own malicious code). This functionality will persist until the kernel is restarted.</p>
-<p>It’s also possible that this was entirely too complicated. You can do similar things from <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">console</span> <span class="pre">--existing</span> <span class="pre">your.json</span></code>… but I’m not sure you can be quite as stealthy or have the range of raw functionality. If you choose to do it with <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">console</span></code>, also be aware that killing the console there will also kill it for any cohabitants. This also presupposes that you have that key <code class="docutils literal notranslate"><span class="pre">.json</span></code>, and if you have that, you probably have code execution some other way. Is it strictly necessary? Probably not. Was it fun? Certainly. Do you have any other cool uses for this technique?</p>
-<p>[1] <a class="reference external" href="https://stackoverflow.com/a/70263390">https://stackoverflow.com/a/70263390</a></p>
+</section>
+<section id="for-interviewers">
+<h2>For Interviewers<a class="headerlink" href="#for-interviewers" title="Permalink to this headline">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Clearly understand the scope along several dimensions.</strong>
+a.  <strong>Evaluation Domains.</strong> There are many domains along which we should evaluate any AI system: correctness, latency, maintainability, fairness, explainability, safety, security, and others. You will be best served by clearly defining roles and responsibilities around these domains and precisely scoping job reqs for prospective candidates. This optimizes your applicant pool and helps clarify internal priorities. Many organizations are not thinking granularly and precisely about differences in these domains, but a successful fairness candidate may have very different skills from a successful security candidate.
+b.  <strong>Organizational Maturity.</strong> Assess your organization’s maturity, both for wholistic security and AI security specifically. This will help you identify both the right seniority (does this person need to build the team, write policy from scratch, etc.) and speciality (digital forensics and incident response, security automation, architecture, offensive security, etc.).</p></li>
+<li><p><strong>Be willing to grow your ideal candidate.</strong> There aren’t a ton of candidates out there with many years of experience. Be willing and have a plan to upskill and mentor folks to build the capability you need. This should also involve some introspection into your organization. Do you have great ML talent but lack security? Then you can accept some risk with the candidates ML background. Are you a security org without much AI depth? Then hire for ML chops and teach the security aspect on the job. This introspection should shape your interview strategy. <strong>Part of your mentorship plan can also include planning and budgeting for external engagements.</strong> There are great industry red teams at places like Microsoft and NVIDIA and networking with those folks at industry conferences and events can be a great way to help ensure your new AI security hire doesn’t feel like they’re alone on an island.</p></li>
+<li><p><strong>Thinking, not tools.</strong> There’s a much-needed boom of tools for AI security tasks, but the field is expanding so rapidly that these tools rarely tailor-fit your requirements. Interview for flexibility and ability to think through both AI and security challenges from first-principles. Your interviews (and candidates’ responses) should be focused on optimization techniques and integrity controls, not specific toolkits.</p></li>
+<li><p><strong>ML DS&amp;A.</strong> If you need to evaluate a candidate’s technical depth, throw away conventional data structures and algorithms questions; there are plenty of more relevant examples that will tell you more about a candidate. I was once asked “Tell me about PyTorch dataloaders.” It was a great question – we got to talk about tensor dimensions, batching and shuffling. You could even pivot this question into security contexts around data poisoning and other training-time attacks. The same interviewer asked me “What is an n-gram?” which also has plenty of nice rabbit holes to dive into.</p></li>
+</ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -433,20 +437,20 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="nvidia.html"
+       href="aml_for_profit.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">NVIDIA Blog Entries</p>
+        <p class="prev-next-title">Adversarial Machine Learning for ~~fun and~~ Profit</p>
       </div>
     </a>
     <a class="right-next"
-       href="first_pycon.html"
+       href="interview_with_xinof.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">My First PyCon</p>
+        <p class="prev-next-title">Interview with Xinof</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -456,6 +460,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-candidates">For Candidates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-interviewers">For Interviewers</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
