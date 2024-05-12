@@ -1,5 +1,6 @@
 # Talks
 
+- [SPIE Defense + Commercial Sensing, Security and Assurance for AI-enabled Systems 2024: AI Red Teaming (Invited Keynote)](https://github.com/JosephTLucas/talks/blob/master/SPIE-DefenseCommercialSensing-AssuranceSecurityForAIEnabledSystems.pdf)
 - [Troopers 2023: Jupysec: Auditing Jupyter to Improve AI Security](https://youtu.be/7HpuPmNLYjk)
 - [JupyterCon 2023: Post-exploitation in Jupyter Environments](https://youtu.be/EujDolCutI8)
 - [PyConUS 2022: Serialization, more than pickling](https://youtu.be/ygrjAGDU1J8)
@@ -9,21 +10,13 @@
 
 ## About Me
 
-<a rel="me" href="https://fosstodon.org/@josephtlucas">Mastodon</a>
-
 [Twitter](https://twitter.com/josephtlucas)
 
 [LinkedIn](https://www.linkedin.com/in/josephtlucas/)
 
-[HackThisAI](https://hackthis.ai)
+[Chair, NumFOCUS Security Committee](https://numfocus.org/support#volunteer)
 
-[DEFCON 30 AI Village CTF](https://www.kaggle.com/competitions/ai-village-ctf)
-
-- West Point Math
-- Georgia Tech Comp Sci
-- Former US Army Cyber
-- Former AWS
-- Currently NVIDIA
+[Member, Jupyter Security](https://jupyter.org/security)
 
 ## Cool things I've found online
 
