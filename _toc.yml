@@ -15,6 +15,7 @@ parts:
     - file: content/aml_for_profit
     - file: content/interviews
     - file: content/preparedness_challenge
+    - file: content/cisa_jcdcai
   - caption: External Writing
     chapters:
     - file: content/interview_with_xinof
