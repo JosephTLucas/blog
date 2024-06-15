@@ -96,4 +96,4 @@ Sufficiently advanced generative models may overcome both of these constraints. 
 
 # Commentary from May 16, 2024
 
-I still believe this concept of a social-network worm is a valid concern. The last six months have contianed significiant gains in multimodal performance and latency that increase the effectiveness of these tools in realtime social engineering. The increase in agent-related research for vulnerability discovery and exploit development also makes the overall task simpler than the architecture I initially outlined.
+I still believe this concept of a social-network worm is a valid concern. The last six months have contained significiant gains in multimodal performance and latency that increase the effectiveness of these tools in realtime social engineering. The increase in agent-related research for vulnerability discovery and exploit development also makes the overall task simpler than the architecture I initially outlined.
