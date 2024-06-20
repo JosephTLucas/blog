@@ -398,8 +398,8 @@ document.write(`
 <h1>venv Injection<a class="headerlink" href="#venv-injection" title="Permalink to this headline">#</a></h1>
 <section id="background">
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
-<p>We do a lot of assumed breach operations and I believe it’s the best way to get some defense in depth wins. Especially from an AI Red Team perspective, I spend a lot of time thinking about how to modify training-time artifacts to subtly manipulate the derivative model or system. In the past, I focused on the potential to <a class="reference external" href="https://josephtlucas.github.io/blog/content/jupyter.html">inject into a user’s Jupyter runtime</a> to modify in-memory artifacts; which has matured into a module in <a class="reference external" href="https://github.com/JosephTLucas/vger">V’ger</a>. My favorite go-to example is overwriting dataloaders or datasets to functionally do dataset poisoning without modifying the files on disk.</p>
-<p>On many of these operations, we see a score of various virtual environments. We’ve often thought about the potential impact of swapping or modifying some of these dependencies on disk to change the behavior of code later executed in that virtual environment. I figured it was probably possible, but <a class="reference external" href="https://github.com/JosephTLucas/venv-injection">here’s the POC</a> verifying it to myself.</p>
+<p>We do a lot of assumed breach operations and I believe it’s the best way to get some defense in depth wins. Especially from an AI Red Team perspective, I spend a lot of time thinking about how to modify training-time artifacts to subtly manipulate the derivative model or system. In the past, I focused on the potential to <a class="reference external" href="https://josephtlucas.github.io/blog/content/jupyter.html">inject into a user’s Jupyter runtime</a> to modify in-memory artifacts; which has matured into a module in <a class="reference external" href="https://github.com/JosephTLucas/vger">V’ger</a>. My favorite go-to example is overwriting dataloaders or datasets to functionally poison training without modifying the files on disk.</p>
+<p>On many of these operations, we see a score of various virtual environments laying around. We’ve often thought about the potential impact of swapping or modifying some of these dependencies on disk to change the behavior of code later executed in that virtual environment. I figured it was probably possible, but <a class="reference external" href="https://github.com/JosephTLucas/venv-injection">here’s the POC</a> verifying it to myself.</p>
 </section>
 <section id="mechanic">
 <h2>Mechanic<a class="headerlink" href="#mechanic" title="Permalink to this headline">#</a></h2>
@@ -411,7 +411,7 @@ document.write(`
 <section id="application">
 <h2>Application<a class="headerlink" href="#application" title="Permalink to this headline">#</a></h2>
 <p>Why? Developers innately trust code they write and objects they push. By modifying an imported dependency, there will be no noticeable change in their code base, nothing pushed to remote repositories, and you can impact artifacts before any integrity controls are applied (like signatures).</p>
-<p>You could do something as simple as fixing a random seed or changing remote URLs, to adding data exfiltration methods, to modifying activation functions or library-provided models and architectures prior to transfer learning.</p>
+<p>You could do something as simple as fixing a random seed or changing remote URLs, or add data exfiltration methods, or very tailored effects like modifying activation functions or library-provided models and architectures prior to transfer learning.</p>
 </section>
 <section id="mitigations">
 <h2>Mitigations<a class="headerlink" href="#mitigations" title="Permalink to this headline">#</a></h2>
