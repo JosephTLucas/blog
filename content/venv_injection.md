@@ -2,7 +2,7 @@
 
 ## Background
 
-We do a lot of assumed breach operations and I believe it's the best way to get some defense in depth wins. Especially from an AI Red Team perspective, I spend a lot of time thinking about how to modify training-time artifacts to subtly manipulate the derivative model or system. In the past, I focused on the potential to [inject into a user's Jupyter runtime](https://josephtlucas.github.io/blog/content/jupyter.html) to modify in-memory artifacts; which has matured into a module in [V'ger](https://github.com/JosephTLucas/vger). My favorite go-to example is overwriting dataloaders or datasets to functionally poison training without modifying the files on disk.
+We do a lot of assumed breach operations and I believe it's the best way to get some defense in depth wins. Especially from an AI Red Team perspective, I spend a lot of time thinking about how to modify training-time artifacts to subtly manipulate the derivative model or system. In the past, I focused on the potential to [inject into a user's Jupyter runtime](https://josephtlucas.github.io/blog/content/jupyter.html) to modify in-memory artifacts (which has matured into a module in [V'ger](https://github.com/JosephTLucas/vger)). My favorite go-to example is overwriting dataloaders or datasets to functionally poison training without modifying the files on disk.
 
 On many of these operations, we see a score of various virtual environments laying around. We've often thought about the potential impact of swapping or modifying some of these dependencies on disk to change the behavior of code later executed in that virtual environment. I figured it was probably possible, but [here's the POC](https://github.com/JosephTLucas/venv-injection) verifying it to myself.
 
