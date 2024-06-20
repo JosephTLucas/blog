@@ -16,6 +16,7 @@ parts:
     - file: content/interviews
     - file: content/preparedness_challenge
     - file: content/cisa_jcdcai
+    - file: content/venv_injection
   - caption: External Writing
     chapters:
     - file: content/interview_with_xinof
