@@ -28,3 +28,6 @@ parts:
     - file: content/jupyter
     - file: content/first_pycon
     - file: content/sklearn_sprint
+  - caption: Other
+    chapters:
+    - file: content/jmo_transition
