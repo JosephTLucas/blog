@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Scikit-Learn Sprint &#8212; Blog</title>
+    <title>Junior Military Officer (JMO) Transition into Tech &#8212; Blog</title>
   
   
   
@@ -60,11 +60,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/sklearn_sprint';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/jmo_transition';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Junior Military Officer (JMO) Transition into Tech" href="jmo_transition.html" />
-    <link rel="prev" title="My First PyCon" href="first_pycon.html" />
+    <link rel="prev" title="Scikit-Learn Sprint" href="sklearn_sprint.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -182,14 +181,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="nvidia.html">NVIDIA Blog Entries</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="jupyter.html">Cohabitating on a Jupyter session</a></li>
 <li class="toctree-l1"><a class="reference internal" href="first_pycon.html">My First PyCon</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Scikit-Learn Sprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sklearn_sprint.html">Scikit-Learn Sprint</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Other</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="jmo_transition.html">Junior Military Officer (JMO) Transition into Tech</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Junior Military Officer (JMO) Transition into Tech</a></li>
 </ul>
 
     </div>
@@ -261,7 +260,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/JosephTLucas/blog/issues/new?title=Issue%20on%20page%20%2Fcontent/sklearn_sprint.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/JosephTLucas/blog/issues/new?title=Issue%20on%20page%20%2Fcontent/jmo_transition.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -291,7 +290,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/content/sklearn_sprint.md" target="_blank"
+      <li><a href="../_sources/content/jmo_transition.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -360,7 +359,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -371,11 +372,22 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Scikit-Learn Sprint</h1>
+    <h1>Junior Military Officer (JMO) Transition into Tech</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thoughts">Thoughts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postscript">Postscript</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -385,31 +397,31 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="scikit-learn-sprint">
-<h1>Scikit-Learn Sprint<a class="headerlink" href="#scikit-learn-sprint" title="Permalink to this headline">#</a></h1>
-<p>Continuing on my Open Source Adventure, yesterday I spent 4 hours working with 40 other Open Source Aspirants to contribute to the popular machine learning library, Scikit-Learn as part of the <a class="reference external" href="https://sites.google.com/view/nyc-2020-scikit-sprint">Data Umbrella + NYC PyLadies Scikit-Learn Open Source Sprint</a>.  It was a phenomenal experience and I would like to cover some of the highlights and encourage you to seek similar opportunities in the future.</p>
-<p>Data Umbrella is a relatively young organization dedicated to “providing a welcoming and educational space for under-represented persons in the fields of ML/DS/AI” and NYC PyLadies is a “group for Python ladies and non-binary people of all levels of programming experience in the NYC metro area.”  Together, these great organizations got together with the Scikit-Learn maintainers and organized this great one-day event to help under-represented people and allies learn how to contribute to open source.</p>
-<p><strong>Lesson 1:  Be on Twitter.</strong>  My partner (more about this later) and I both heard about this event through Twitter.  There are incredibly helpful and active data science/machine learning and Python communities on Twitter.  It is the best way to find out about conferences, events, or engage with the movers and shakers.</p>
-<p><a class="reference external" href="https://twitter.com/DataUmbrella/status/1259860810010185731"><img alt="twitter" src="../_images/twitter.JPG" /></a></p>
-<p>After seeing a Tweet about the event, I had to apply.  As you will see, this event was very personal and the Scikit-Learn maintainers were incredibly available and responsive (not something to take for granted).  To ensure this valuable educational resource was used wisely, the Sprint organizers did do some screening.</p>
-<p><strong>Lesson 2:  Be engaged, honest, and responsible.</strong> In my application, I talked about my long-standing goal of contributing to open source.  I also made it clear that I see the data science and python communities as just that, communities.  As a member of the community, I not only wanted to participate, but I wanted to continue improving the community and making it more accessible and inclusive for under-represented people.  Finally, I made sure that I would be available to participate.  I would not waste a slot for another candidate.  This was a Saturday commitment.</p>
-<p>A couple of the days before the Sprint started, the organizers sent out preparatory material.  This included things like the communication plan, and some short introductions to <a class="reference external" href="https://scikit-learn.org/stable/">Scikit-Learn</a> and Github.  I made sure to knock out these little assignments before the event, so I could maximize my productivity during the Sprint.  The material was very accessible, and new programmers and scientists will be able to follow along.</p>
-<p>The first key part of what made the Sprint so accessible was that the organizers and maintainers curated a list of open issues that they thought may be accessible to new contributors.  Often, large open source repositories have some issues tagged as <code class="docutils literal notranslate"><span class="pre">good</span> <span class="pre">first</span> <span class="pre">issue</span></code> or <code class="docutils literal notranslate"><span class="pre">easy</span></code>, which are good indicators.  In this case, the maintainers greatly reduced that set, increasing the accessibility of the project for us.  The night before the Sprint, I looked through this list, selecting a couple issues that I thought I might be able to handle.</p>
-<p><strong>Lesson 3:  Do your homework.</strong>  The Sprint will go faster than you think.  The more prepared you are (by understanding version control with git, making sure your programming environment is working, and having a rough idea of what you want to work on), the more productive your Sprint experience will be.  That being said, if this all seems daunting, do not worry, there will be a lot of helpful people who can get you setup on game day.</p>
-<p>On the day of the Sprint, we started the day with a little virtual huddle, then it was off to the races!  It was cool to just hang out with the Scikit-Learn maintainers on Discord before everything started.  We got to talk a little bit about design decisions and philosophies.  That sort of thing is sometimes hard to get without an experience like this Sprint.  The second key part of what made the Sprint so accessible was the commitment to pair programming.  Each participant was assigned to a table with another participant.  You agree on an issue with your partner and spend the day working on it together.  This was my first time pair programming and it made the experience so much more educational for me!  I was the more junior member on my team, so most of the day I was sharing my screen while my partner and I talked about what we should do.  My partner and I spent the whole 4 hours on voice chat with each other.  Saying that now, it sounds like a lot, but it really felt very natural.  There were also some unintended benefits of screen sharing.  I started out programming in VS Code, but we joked about how my partner was “hard core” and used vi.  I have always been interested in vi and struggled to “stick with it”, but halfway through the day I switched over and my partner taught me some awesome new tips.  I am writing this blog in vi now!</p>
-<p>I am on the East Coast of the US.  My partner was located in Paris.  How cool is that?  We spent the first couple of minutes getting to know each other, and I was excited to learn that my partner had already made several contributions to Scikit-Learn.  Additionally, we shared several similar work experiences.  It is incredible how you can build relationships and community remotely around the ideals and experience of open source software contribution.</p>
-<p><strong>Lesson 4:  It is about more than code.</strong>  I was originally interested in open source because I wanted to “give back”, but what has kept me interested is the sense of being able to continue learning and growing in a community.</p>
-<p>The first issue my partner and I decided to tackle was changing a function to handle optional keyword arguments.  That seemed like a feasible way to start understanding the library.  It turned out that the function we picked was really a convenience wrapper to another function.  The python here was easy, but it was a confidence boost to build the source code and pass all of the unit tests.  I also was able to continue building good habits around version control (write good commit messages).  I will highlight a key difference in this Sprint from contributing to Open Source any other time: <em>The maintainers reviewed our pull request and approved it within minutes.</em>  It was great to receive such immediate feedback.  As a hobby-pythonista, it was also very educational to see how a huge project like Scikit-Learn organizes its code, documentation, tests, and continuous integration pipeline.</p>
-<p><img alt="merge" src="../_images/merge.JPG" /></p>
-<p><strong>Lesson 5:  There is more to a codebase than the intended functionality.</strong>  Scikit-Learn is a machine learning library, but you do not need to know anything about machine learning to successfully contribute.  Many of the open issues involved updating documentation, or in our case, updating how function parameters are passed.</p>
-<p>With such a quick win under our belt, my partner and I set off to find another issue.  It was quite fun and encouraging to see so much activity on the issue tracker; many of the issues we visited were already claimed by fellow sprint participants.  Eventually, my partner and I found an issue that looked interesting.</p>
-<p>This was a new <code class="docutils literal notranslate"><span class="pre">feature</span> <span class="pre">request</span></code>.  Someone who used Scikit-Learn wanted to add an optional argument.  As we read through the issue tracker, we saw that one of the maintainers (who was participating in the Sprint!) proposed another way of achieving that functionality without changing the underlying function (by using another function instead).  The issue was changed to <code class="docutils literal notranslate"><span class="pre">documentation</span></code> to reflect that instead of changing the code, Scikit-Learn could clarify their documentation to illustrate this alternative approach.  Now here is the key: this conversation was <em>years</em> old and had taken months of back and forth.  My partner and I deliberated about where to put the documentation, then just asked the maintainer!  They immediately responded, but we realized there was some nuance that we were not ready to solve, so we left a comment in the issue and decided we were not going to work on it during the Sprint.  Feel free to go check out the <a class="reference external" href="https://github.com/scikit-learn/scikit-learn/issues/9193">issue</a> and see what you think should be done.</p>
-<p><img alt="issue" src="../_images/issue.JPG" /></p>
-<p><strong>Lesson 6:  The codebase and issues outlive the Sprint.</strong>  While we had the luxury of direct access to one of the core developers through Discord, we were jumping into an ongoing discussion that lasted years and would continue after the Sprint.  To contribute to the historical record for future contributors, we added our relevant discussion to the <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">issue</span></code>, not just leaving it in the Sprint Discord channel.</p>
-<p>By this point, we had about two hours left and my partner and I felt like being ambitious.  We found an open issue that proposed enabling bootstrapping at the tree-level in forest classifiers and regressors to decrease training time.  Here was an opportunity to contribute to the functionality of this cool data science library; very exciting!  We spent the next two hours researching how the code works currently and how we might implement this new feature.  We prototyped a toy example and…. it failed!  We trouble-shooted and… it still failed.  As time ticked down on the Sprint, we could not figure out why.  So we submitted a <code class="docutils literal notranslate"><span class="pre">work</span> <span class="pre">in</span> <span class="pre">progress</span></code> pull-request and called it a successful day.  We agreed that we had enjoyed working together and would continue working on this issue even after the Sprint ended.</p>
-<p><strong>Lesson 7:  The Sprint is just the beginning.</strong>  While it is an awesome event, the Sprint is just one day.  The goal is that it jump-starts your ability to contribute to Open Source.  With that perspective, I am almost glad that may partner and I left that one issue unfinished.  The Sprint gave us a great foundation to get started and now we will be able to continue to work and finish that feature request on our own.  A new friend and a foothold in a fun new project, what more can you ask for?</p>
-<p>As I look back on the event, I am amazed at what we were able to do in 4 hours:  we strengthened our sense of community and contributed to one of my favorite python libraries.  Personally, I learned more about SciKit-Learn, Open Source workflows, python, git, and even vi.  I would like to thank the maintainers and core developers for all of their time before, during, and after the event.  You were all incredibly cool, approachable, and helpful.  I would also like to thank the organizers and volunteers from <a class="reference external" href="https://www.dataumbrella.org">Data Umbrella</a> and <a class="reference external" href="https://www.meetup.com/NYC-PyLadies/">NYC PyLadies</a>, especially <a class="reference external" href="https://reshamas.github.io/">Reshama Shaikh</a>, the primary organizer.  I appreciate your flexibility and willingness to hold the event remotely.  I probably would not have been able to participate otherwise.  This was a great event that I recommend to all open source aspirants.  I am looking forward to continuing my open source adventure and continuing to strengthen and open the python and data science communities.</p>
-<p><a class="reference external" href="https://twitter.com/reshamas/status/1269410508270157832"><img alt="twitter2" src="../_images/final.JPG" /></a></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="junior-military-officer-jmo-transition-into-tech">
+<h1>Junior Military Officer (JMO) Transition into Tech<a class="headerlink" href="#junior-military-officer-jmo-transition-into-tech" title="Permalink to this headline">#</a></h1>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
+<p>This post was motivated by a LinkedIn message from a junior combat arms officer asking for advice on how to land a “managerial” role at a big tech firm. Here’s a brain dump of my reaction. I could also be writing this to myself four years ago.</p>
+<p>I’m writing this four years after leaving the service. I ETSed as an O3 in the Army after Company Command. Since then, I worked at as a data scientist, a technical program manager, and a security researcher (all “individual contributor” roles). <strong>I have never worked as a manager in a tech company, but I’ve seen plenty and feel qualified to talk about their hiring, roles, and responsibilities.</strong></p>
+</section>
+<section id="thoughts">
+<h2>Thoughts<a class="headerlink" href="#thoughts" title="Permalink to this headline">#</a></h2>
+<p>Why do you want to be a manager? Have a good answer for that question. Bad answers include flavors of “it’s what I’ve done” and “I’ve always enjoyed leadership.”</p>
+<p>Military officer training does very little to prepare individuals to successfully navigate tech management. In the military, we often hear about differences between “management” and “leadership” with an emphasis on developing skills in the latter. While leadership skills will serve you well in any future position, they aren’t 1) how you’ll get hired as a tech manager, 2) how you’ll be assessed as a tech manager, or 3) how you’ll be expected to serve your team as a tech manager.</p>
+<p>Military officers are put in charge of a group of individuals and must possess the skills and abilities to plan a mission and convince those individuals to execute that mission. Tech managers are hired to build, retain, and optimize a team. They may have some role in strategy and execution, but those are not their primary role (particularly at the junior management levels). The best managers I have worked with can coach/mentor subordinates, but they do not allow themselves to potentially block execution. They know that they could be pulled away for days to deal with HR/legal or need to be on interviews, getting you promoted, or advocating across the organization. Management at tech companies is a specific skillset, just like programming.</p>
+<p>With that in mind, think forward to the interview process. Tech manager interviews are about times you’ve built teams, improved processes, or dealt with difficult HR situations… things that very few JMOs get to deal with. Your anecdote about Article 15ing someone for a some alcohol-related shenanigans isn’t going to land well. You’ve probably never had opportunities to recruit your own team, retain someone when they had a competing job offer, or advocate for a subordinates’ promotion – at least not in ways that are relatable to your civilian interviewer. Your resume will say that you’ve been accountable for millions of dollars of property, but you haven’t really forecasted and managed a discretionary budget. What’s the difference in performance you should expect from an Engineer and a Senior Engineer? You don’t have that calibration. You’ve done counseling and have onboarded new employees – I’m not saying you’re entirely without relevant experience, but it’s certainly an uphill battle compared to civilian peers.</p>
+<p>You have plenty of transferable skills, but broaden your aperture beyond “managerial roles.” The most successful individual contributors have your skills: organization, communication, distillation, and problem decomposition. Before putting yourself in a situation where you assume responsibility for building and optimizing an organization, try stepping into a role where you can just learn about how one functions in the private sector.</p>
+<p>If you feel yourself thinking “but I don’t have the skills to pass a coding interview, my real strength is leadership,” that might be a problem (PM roles aside, those might be a good fit for you). You may find it very difficult to build, mentor, and advocate for a team when you lack the fundamental experience and skills to skim the surface of their job. Can every tech manager code? Certainly not, but most of them have years and demonstrated performance navigating tech organizations. They’ve picked up the right level of domain understanding through experience or osmosis. I’ll put it bluntly: I wouldn’t want to be managed by someone who was a promote-ahead-of-peers combat arms leader without domain knowledge and I don’t think self-aware leaders want to put themselves in that position. We’re not charging the hill, we’re scooping bits and bytes into freight trains. More than someone to lead the charge, we need someone to make sure we’re mining the right stuff, have shovels, and that the cars leave on time.</p>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h2>
+<p>Does this mean that officers shouldn’t try to be managers at tech companies? Not necessarily. You may find that your passion for coaching and personnel talent management make tech manager roles a great fit for you. However, I don’t think it’s where most transitioning JMOs should set their sights for their first job – you don’t have the perspective to know if you’ll enjoy it, it’ll be tough to successfully navigate interviews, and you might not have the KSAs to really serve your team. That last one is what you’re thinking about as an officer, right? Servant leadership? Here’s a chance to demonstrate leadership without management. Pick up a shovel first.</p>
+<p>Project/Program Manager is a great transition role. You’ll get to manage execution with a focus on the mission, but are rarely a blocker and are rarely distracted with “managerial” things.</p>
+</section>
+<section id="postscript">
+<h2>Postscript<a class="headerlink" href="#postscript" title="Permalink to this headline">#</a></h2>
+<p>Obviously this doesn’t apply to everyone and just represents my short set of experiences. Do what makes you happy and supports your family. I wrote this as if the military was your only source of knowledge and experience (as it was for me). If that’s not the case for you, you probably don’t need this post.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -441,22 +453,13 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="first_pycon.html"
+       href="sklearn_sprint.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">My First PyCon</p>
+        <p class="prev-next-title">Scikit-Learn Sprint</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="jmo_transition.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Junior Military Officer (JMO) Transition into Tech</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -464,6 +467,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thoughts">Thoughts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postscript">Postscript</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
