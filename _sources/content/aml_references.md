@@ -14,6 +14,8 @@
 - [TextAttack](https://github.com/QData/TextAttack)
 
 ## Other
+- [Training: Exploring Adversarial Machine Learning](https://learn.nvidia.com/courses/course-detail?course_id=course-v1:DLI+S-DS-03+V1)
+- [Training: AI Security Fundamentals](https://learn.microsoft.com/en-us/training/paths/ai-security-fundamentals/)
 - [Adversarial Robustness - Theory and Practice](https://adversarial-ml-tutorial.org/introduction/)
 - [Adversarial Machine Learning Reading List](https://nicholas.carlini.com/writing/2018/adversarial-machine-learning-reading-list.html)
 - [Trustworthy Machine Learning](http://www.trustworthymachinelearning.com/)
