@@ -2,6 +2,7 @@
 
 ## Talks
 
+- [ShmooCon 2025: Sandboxing Agentic Workflows with WebAssembly](https://www.youtube.com/watch?v=-_jUZBMeU5w&t=18649s)
 - [SPIE Defense + Commercial Sensing, Security and Assurance for AI-enabled Systems 2024: AI Red Teaming (Invited Keynote)](https://github.com/JosephTLucas/talks/blob/master/SPIE-DefenseCommercialSensing-AssuranceSecurityForAIEnabledSystems.pdf)
 - [Troopers 2023: Jupysec: Auditing Jupyter to Improve AI Security](https://youtu.be/7HpuPmNLYjk)
 - [JupyterCon 2023: Post-exploitation in Jupyter Environments](https://youtu.be/EujDolCutI8)
