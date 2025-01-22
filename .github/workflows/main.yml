@@ -1,19 +1,18 @@
 name: deploy-book
 
+# Run this when the main branch changes
 on:
   push:
     branches:
     - master
 
+# This job installs dependencies, builds the book, and pushes it to `gh-pages`
 jobs:
   deploy-book:
     runs-on: ubuntu-latest
     permissions:
       pages: write
       id-token: write
-      contents: write
-    environment:
-      name: github-pages
     steps:
     - uses: actions/checkout@v3
 
@@ -29,21 +28,16 @@ jobs:
 
     # Build the book
     - name: Build the book
-      env:
-        EBIRD_API: ${{ secrets.EBIRD_API }}
-        NASA_API: ${{ secrets.NASA_API }}
       run: |
         jupyter-book build .
 
     # Upload the book's HTML as an artifact
     - name: Upload artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-pages-artifact@v2
       with:
-        path: "_build/html"
+        path: "_build/html/"
 
     # Deploy the book's HTML to GitHub Pages
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v2
-      with:
-        path: "_build/html"
