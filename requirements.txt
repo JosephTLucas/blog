@@ -1,8 +1,1 @@
 jupyter-book
-matplotlib
-numpy
-scipy
-geopandas
-pandas
-requests
-pydata-sphinx-theme==0.13.1
