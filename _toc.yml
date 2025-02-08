@@ -30,4 +30,5 @@ parts:
     - file: content/sklearn_sprint
   - caption: Other
     chapters:
+    - file: content/fafo
     - file: content/jmo_transition
