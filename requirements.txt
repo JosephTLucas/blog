@@ -1,1 +1,5 @@
-jupyter-book
+jupyterlite-core>=0.5.1
+jupyterlite-pyodide-kernel>=0.5.2
+jupyterlab>=4.4.2
+jupyterlab-open-url-parameter>=0.3.0
+libarchive-c>=5.2

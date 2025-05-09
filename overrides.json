@@ -1,0 +1,10 @@
+{
+    "@jupyterlab/docmanager-extension:plugin": {
+        "defaultViewers": {
+        "markdown": "Markdown Preview"
+        }
+    },
+    "@jupyterlab/apputils-extension:themes": {
+        "theme": "JupyterLab Dark"
+      }
+}
