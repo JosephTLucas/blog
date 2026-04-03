@@ -4,7 +4,7 @@ Someone\* framed the current wave of AI-enabled vulnerability discovery as “de
 
 ![](../.img/vuln_maxima.png)
 
-My friend, Jacob Baxter framed the future state of exploitation as a [predator-prey problem](https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations). The rabbits (vulns) “reproduce” at a certain rate and are eaten (exploited) at a certain rate. Or maybe getting eaten is getting patched… either way, they’re consumed and taken off the board. The rates of vuln production and consumption can inform the population dynamics of the rabbits. That’s what I’m interested in… what is the future density of vulnerabilities?
+My friend Jacob Baxter framed the future state of exploitation as a [predator-prey problem](https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations). The rabbits (vulns) “reproduce” at a certain rate and are eaten (exploited) at a certain rate. Or maybe getting eaten is getting patched… either way, they’re consumed and taken off the board. The rates of vuln production and consumption can inform the population dynamics of the rabbits. That’s what I’m interested in… what is the future density of vulnerabilities?
 
 Another way to think about it is as a [Markov Chain](https://en.wikipedia.org/wiki/Markov_chain). There’s a queue of software creation/input leading to vulnerability states \[latent, discovered, exploited, patched, and remediated\]. 
 
